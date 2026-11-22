@@ -1,43 +1,123 @@
 @import "tailwindcss";
 
 /*
- * HAMYON.UZ — design tokens (foundation).
+ * HAMYON.UZ — design system
+ * Approved visual identity: Direction A "Chek", refined (2026-11-22).
  *
- * These are the starting values for the palette from the project brief.
- * They will be refined in the visual identity stage — change them here
- * and the whole site follows.
+ * Everything visual comes from the tokens below. Change a value here and
+ * the whole site follows. Do not use colours or fonts that are not listed.
  *
- * Usage in code: bg-paper, text-charcoal, border-sand, text-forest, etc.
+ * In code: bg-paper, text-forest, font-serif, text-display, px-gutter …
  */
+
 @theme {
-  /* Colour — warm, editorial, locally rooted */
-  --color-paper: #f6f1e7; /* warm white, like newsprint / receipt paper */
-  --color-sand: #e3d4b6; /* bazaar dust, sandstone */
-  --color-forest: #1e3a2c; /* deep green, primary brand colour */
-  --color-terracotta: #a9472a; /* brick, clay, price-tag red */
-  --color-brass: #9c7d3c; /* muted brass, old coins, scales — lines, icons and large text only (contrast 3.4:1) */
-  --color-charcoal: #211f1b; /* main text */
-  --color-ink-muted: #5c5650; /* secondary text */
-  --color-rule: #d6cbb5; /* thin lines and dividers */
+  /* ── Colour ─────────────────────────────────────────────────────────── */
+  --color-*: initial; /* only the brand palette is available */
 
-  /* Typography — final typefaces are chosen in the identity stage.
-     Must support Uzbek Latin (oʻ, gʻ, ʼ) and Cyrillic. */
-  --font-display: ui-serif, Georgia, "Times New Roman", serif;
-  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --color-paper: #f6f1e7; /* warm white — the base, ~70% of every screen */
+  --color-sand: #e3d4b6; /* Tahlil sections, secondary blocks */
+  --color-forest: #1e3a2c; /* wordmark, links, newsletter block */
+  --color-terracotta: #a9472a; /* one accent: kicker, italic word, numbers */
+  --color-brass: #9c7d3c; /* hairlines and icons only — never small text */
+  --color-charcoal: #211f1b; /* text; the dark "cinema" video sections */
 
-  /* Layout */
-  --container-page: 84rem;
-  --container-reading: 42rem;
+  --color-ink-soft: #3a3631; /* deks and secondary body text */
+  --color-ink-muted: #5c5650; /* meta, captions, labels */
+  --color-rule: #d6cbb5; /* thin dividers on paper */
+  --color-dots: #8a837a; /* perforation and dotted leaders */
+  --color-stone: #cfc6b4; /* secondary text on charcoal */
+  --color-smoke: #4f4840; /* dividers on charcoal */
+
+  /* ── Typefaces ──────────────────────────────────────────────────────── */
+  --font-*: initial;
+  /* Headlines and reading text. Optical sizes adjust automatically. */
+  --font-serif: "Source Serif 4 Variable", Georgia, "Times New Roman", serif;
+  /* Menus, labels, buttons, captions. */
+  --font-sans:
+    "Commissioner Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Numbers only: prices, durations, dates, reading time, ".uz". */
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ── Type scale (fluid: phone 390px → desktop 1440px) ────────────── */
+  --text-display-xl: clamp(2.875rem, 1.343rem + 6.286vw, 7rem); /* 46 → 112, article opening */
+  --text-display-xl--line-height: 0.92;
+  --text-display-xl--letter-spacing: -0.05em;
+  --text-display-xl--font-weight: 500;
+
+  --text-display: clamp(3rem, 1.793rem + 4.952vw, 6.25rem); /* 48 → 100, homepage lead */
+  --text-display--line-height: 0.93;
+  --text-display--letter-spacing: -0.045em;
+  --text-display--font-weight: 500;
+
+  --text-h1: clamp(2.375rem, 1.493rem + 3.619vw, 4.75rem); /* 38 → 76, video title */
+  --text-h1--line-height: 0.96;
+  --text-h1--letter-spacing: -0.04em;
+  --text-h1--font-weight: 500;
+
+  --text-h2: clamp(1.875rem, 1.271rem + 2.476vw, 3.5rem); /* 30 → 56, feature blocks */
+  --text-h2--line-height: 1;
+  --text-h2--letter-spacing: -0.035em;
+  --text-h2--font-weight: 500;
+
+  --text-section: clamp(1.875rem, 1.55rem + 1.333vw, 2.75rem); /* 30 → 44, section names */
+  --text-section--line-height: 1.05;
+  --text-section--letter-spacing: -0.03em;
+  --text-section--font-weight: 500;
+
+  --text-h3: clamp(1.438rem, 1.182rem + 1.048vw, 2.125rem); /* 23 → 34, story headlines */
+  --text-h3--line-height: 1.05;
+  --text-h3--letter-spacing: -0.025em;
+  --text-h3--font-weight: 500;
+
+  --text-h4: clamp(1.25rem, 1.111rem + 0.5714vw, 1.625rem); /* 20 → 26, lists, thumbnails */
+  --text-h4--line-height: 1.15;
+  --text-h4--letter-spacing: -0.01em;
+  --text-h4--font-weight: 500;
+
+  --text-dek: clamp(1.188rem, 0.9786rem + 0.8571vw, 1.75rem); /* 19 → 28, italic standfirst */
+  --text-dek--line-height: 1.4;
+
+  --text-lead: clamp(1.156rem, 1.052rem + 0.4286vw, 1.438rem); /* 18.5 → 23 */
+  --text-lead--line-height: 1.45;
+
+  --text-body: clamp(1.156rem, 1.098rem + 0.2381vw, 1.312rem); /* 18.5 → 21, article text */
+  --text-body--line-height: 1.65;
+
+  --text-ui: 0.96875rem; /* 15.5 — menus and buttons */
+  --text-ui--line-height: 1.4;
+  --text-small: 0.84375rem; /* 13.5 — captions, meta */
+  --text-small--line-height: 1.5;
+  --text-label: 0.75rem; /* 12 — uppercase labels */
+  --text-label--line-height: 1.3;
+  --text-label--letter-spacing: 0.12em;
+
+  /* ── Spacing & layout ───────────────────────────────────────────────── */
+  --spacing-gutter: clamp(1.25rem, -0.1429rem + 5.714vw, 5rem); /* page side margins: 20 → 80 */
+  --spacing-section: clamp(
+    4.5rem,
+    2.689rem + 7.429vw,
+    9.375rem
+  ); /* between major sections: 72 → 150 */
+  --spacing-band: clamp(
+    2.5rem,
+    0.875rem + 6.667vw,
+    6.875rem
+  ); /* between blocks inside a section: 40 → 110 (named "band" — "block" clashes with Tailwind) */
+
+  --container-page: 90rem; /* 1440 — widest content */
+  --container-reading: 43.75rem; /* 700 — article text column */
 }
 
+/* ── Base ─────────────────────────────────────────────────────────────── */
 @layer base {
   html {
     background-color: var(--color-paper);
     color: var(--color-charcoal);
-    font-family: var(--font-body);
+    font-family: var(--font-serif);
+    font-optical-sizing: auto;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
@@ -50,6 +130,11 @@
     outline-offset: 3px;
   }
 
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3em;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -59,4 +144,113 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+/* ── Reusable styles ──────────────────────────────────────────────────── */
+
+/* Centred page width with responsive side margins. */
+@utility page {
+  width: 100%;
+  max-width: var(--container-page);
+  margin-inline: auto;
+  padding-inline: var(--spacing-gutter);
+  box-sizing: border-box;
+}
+
+/* Small uppercase rubric above a headline, in terracotta. */
+@utility kicker {
+  font-family: var(--font-sans);
+  font-size: var(--text-label);
+  line-height: var(--text-label--line-height);
+  letter-spacing: var(--text-label--letter-spacing);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+}
+
+/* Same shape as the kicker, but quiet — for labels and section meta. */
+@utility label {
+  font-family: var(--font-sans);
+  font-size: var(--text-label);
+  line-height: var(--text-label--line-height);
+  letter-spacing: var(--text-label--letter-spacing);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+/* Receipt hint 1 — the perforation line. Only between major sections. */
+@utility perforation {
+  border: 0;
+  border-top: 1px dashed var(--color-dots);
+  margin: 0;
+}
+
+/* Receipt hint 2 — dotted leader: "Title ······· 6 daq". */
+@utility leader {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+}
+@utility leader-dots {
+  flex: 1;
+  min-width: 0.75rem;
+  border-bottom: 1px dotted var(--color-dots);
+  transform: translateY(-0.25em);
+}
+
+/* Receipt hint 3 — figures: prices, durations, dates. */
+@utility figure {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/* Underline that appears on hover — for headlines and quiet links. */
+@utility link-quiet {
+  text-decoration-line: none;
+  &:hover {
+    text-decoration-line: underline;
+  }
+}
+
+/* Buttons */
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.125rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-ui);
+  font-weight: 500;
+  line-height: 1.2;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 150ms,
+    color 150ms;
+}
+@utility btn-solid {
+  border-color: var(--color-forest);
+  background-color: var(--color-forest);
+  color: var(--color-paper);
+  font-weight: 600;
+}
+
+/* Square icon button with a 44px touch target. */
+@utility icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
 }

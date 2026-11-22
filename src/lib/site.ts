@@ -1,6 +1,6 @@
 /**
  * Saytning asosiy sozlamalari — bitta joyda.
- * Site-wide settings in one place: name, address, sections.
+ * Site-wide settings in one place: name, address, sections, links.
  * Change things here instead of hunting through the code.
  */
 
@@ -24,16 +24,40 @@ export const site = {
 } as const;
 
 /**
- * Boʻlimlar — the planned sections and their web addresses.
- * Pages for these are built in later stages; the addresses are fixed now
- * so links never have to change after launch.
+ * Boʻlimlar — the main sections and their web addresses.
+ * Addresses are fixed so links never have to change after launch.
  */
 export const sections = [
   { key: "articles", label: "Maqolalar", href: "/maqolalar" },
   { key: "videos", label: "Videolar", href: "/videolar" },
   { key: "analysis", label: "Tahlil", href: "/tahlil" },
   { key: "guides", label: "Qoʻllanmalar", href: "/qollanmalar" },
-  { key: "about", label: "Biz haqimizda", href: "/biz-haqimizda" },
 ] as const;
 
 export type SectionKey = (typeof sections)[number]["key"];
+
+/** Shown after the sections in the menu, in a quieter colour. */
+export const aboutLink = { label: "Biz haqimizda", href: "/biz-haqimizda" } as const;
+
+/** Newsletter sign-up lives on the homepage (built in stage 3). */
+export const newsletterLink = { label: "Haftalik xat", href: "/#haftalik-xat" } as const;
+
+/** Search page (planned). */
+export const searchHref = "/qidiruv";
+
+/** Footer links. */
+export const footerLinks = [
+  { label: "Tahririyat tamoyillari", href: "/biz-haqimizda#tamoyillar" },
+  { label: "Biz haqimizda", href: "/biz-haqimizda" },
+  { label: "Aloqa", href: "/biz-haqimizda#aloqa" },
+] as const;
+
+/**
+ * Social media. Add the real address when an account exists —
+ * links with an empty address are not shown on the site.
+ */
+export const socialLinks = [
+  { label: "Telegram", href: "" },
+  { label: "YouTube", href: "" },
+  { label: "Instagram", href: "" },
+] as const;

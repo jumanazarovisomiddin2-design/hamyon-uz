@@ -53,3 +53,32 @@ day. This prevents an unfinished site from appearing in search results.
 Paper `#F6F1E7` · Sand `#E3D4B6` · Forest `#1E3A2C` · Terracotta `#A9472A` · Brass `#9C7D3C` ·
 Charcoal `#211F1B`. All text colours pass accessibility contrast on paper, except **brass**, which
 is reserved for lines, icons and large text. To be refined in the visual identity stage.
+
+## 2026-11-22 — Visual identity approved: Direction A "Chek", refined
+
+Chosen from three explorations (A Chek, B Bozor, C Panjara), then refined with C's whitespace
+and rhythm. Design canvas: https://claude.ai/artifact/4oPhCSTSR2svKs4CLDLK4V
+
+- **Typefaces** (self-hosted, all verified for oʻ gʻ ʼ and ў қ ғ ҳ):
+  Source Serif 4 — headlines (weight 500, italic for one accent word) and reading text;
+  Commissioner — menus, labels, buttons, captions; IBM Plex Mono — numbers only.
+- **Receipt hints, used sparingly** (max two per screen): dashed "perforation" line between
+  major sections · dotted leaders in lists/contents/chapters · mono figures · ".uz" in the logo.
+  No receipt boxes, zigzag edges or barcodes.
+- **Colour proportion**: paper ~70%, charcoal text, forest for the wordmark and links, sand for
+  Tahlil, terracotta as a single accent. Video sections are dark ("cinema") charcoal.
+- **Uzbek identity** is carried by documentary photography (real places, unstaged, everyday
+  details) — not by ornament.
+
+## 2026-11-22 — Design system implemented (stage 2)
+
+- All tokens live in `src/app/globals.css`: colours (Tailwind's default palette is switched off),
+  fluid type scale `text-display-xl … text-small` (phone 390 px → desktop 1440 px), spacing
+  `gutter` / `section` / `band`, widths `page` (1440) and `reading` (700).
+- Reusable styles: `page`, `kicker`, `label`, `perforation`, `leader` + `leader-dots`, `figure`,
+  `link-quiet`, `btn`, `btn-solid`, `icon-btn`.
+- Components in `src/components/`: `Wordmark`, `SiteHeader` (light/dark), `SiteNav`,
+  `MobileMenu`, `SiteFooter`, `icons`.
+- Living style guide at `/dizayn-tizimi` (hidden from search engines).
+- Social links are configured in `src/lib/site.ts` and only appear once a real address is added.
+- Note: a spacing token must not be called `block` — it clashes with Tailwind's `inline-block`.

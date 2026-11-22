@@ -1,18 +1,18 @@
-import { site } from "@/lib/site";
-
 /**
- * Temporary holding page while the site is being built.
- * Replaced by the real homepage in a later stage.
+ * Temporary holding page. The real homepage is built in stage 3.
  */
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-(--container-page) flex-1 flex-col justify-end px-6 py-16 sm:px-10">
-      <p className="text-ink-muted font-mono text-xs tracking-[0.2em] uppercase">Tayyorlanmoqda</p>
-      <h1 className="font-display text-forest mt-4 text-5xl leading-none tracking-tight sm:text-8xl">
-        {site.name}
-      </h1>
-      <p className="text-charcoal mt-6 max-w-(--container-reading) text-lg">{site.tagline}.</p>
-      <div className="border-rule mt-12 border-t" aria-hidden="true" />
-    </main>
+    <section className="page pt-band pb-8">
+      <div className="flex max-w-[60rem] flex-col gap-7">
+        <p className="kicker m-0">Tayyorlanmoqda</p>
+        <h1 className="text-display m-0">
+          Pulni <em className="text-terracotta">tushunish</em> — erkinlik
+        </h1>
+        <p className="text-dek text-ink-soft m-0 max-w-[38rem] italic">
+          Nasiya, qarz, jamgʻarma va kundalik xaridlar haqida mustaqil jurnal. Tez orada shu yerda.
+        </p>
+      </div>
+    </section>
   );
 }

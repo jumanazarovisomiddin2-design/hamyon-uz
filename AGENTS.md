@@ -15,6 +15,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Owner is a beginner: do the work, explain simply, recommend one option.
 - UI text is Uzbek (Latin). Use ʻ (U+02BB) for oʻ/gʻ and ʼ (U+02BC) for the tutuq belgisi — never `'`.
 - Colours, fonts and spacing come only from the tokens in `src/app/globals.css`. No ad-hoc hex values.
+- Approved identity: Direction A "Chek" refined (see docs/DECISIONS.md). Serif = headlines + text,
+  Commissioner = UI, Plex Mono = numbers only. Receipt hints max two per screen. Check `/dizayn-tizimi`.
 - Avoid: rounded-card grids, gradients, glassmorphism, stock-photo look, decorative animation.
 - Site name, sections and addresses live in `src/lib/site.ts`. Addresses are fixed — don't rename.
 - Record significant decisions in `docs/DECISIONS.md`; update `docs/ROADMAP.md` when a stage finishes.
