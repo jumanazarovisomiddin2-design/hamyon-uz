@@ -1,0 +1,6 @@
+# Not needed on the live site — keeps the upload small
+Archive.zip
+content/archive
+docs
+scripts/import_sources.py
+*.tgz

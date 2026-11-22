@@ -13,8 +13,17 @@ export const site = {
   locale: "uz_UZ",
   lang: "uz",
 
-  /** Real address. Set NEXT_PUBLIC_SITE_URL in .env.local / hosting settings. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://hamyon.uz",
+  /**
+   * The site's public address (used for link previews and search engines).
+   * 1. NEXT_PUBLIC_SITE_URL, if set (e.g. after buying a domain);
+   * 2. on Vercel, the project's own address (…vercel.app), set by Vercel automatically;
+   * 3. otherwise this computer (npm run dev).
+   */
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "http://localhost:3000"),
 
   /**
    * Search engines are kept out until launch.
