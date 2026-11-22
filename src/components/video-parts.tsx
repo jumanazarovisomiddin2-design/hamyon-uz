@@ -36,7 +36,7 @@ export function VideoStage({ video }: { video: Video }) {
         <YouTubePlayer id={video.youtubeId} title={video.title} poster={video.poster} />
       ) : (
         <>
-          <VideoPoster video={video} priority sizes="(min-width: 1440px) 1280px, 100vw" />
+          <VideoPoster video={video} preload sizes="(min-width: 1440px) 1280px, 100vw" />
           <div className="absolute top-3 left-3 md:top-5 md:left-5">
             <ComingSoon />
           </div>
@@ -47,7 +47,16 @@ export function VideoStage({ video }: { video: Video }) {
 }
 
 /** Card used on the homepage and in MULTIMEDIA. */
-export function VideoCard({ video, large = false }: { video: Video; large?: boolean }) {
+export function VideoCard({
+  video,
+  large = false,
+  level = "h3",
+}: {
+  video: Video;
+  large?: boolean;
+  level?: "h2" | "h3";
+}) {
+  const Heading = level;
   return (
     <article className="group flex flex-col gap-4">
       <Link
@@ -68,11 +77,11 @@ export function VideoCard({ video, large = false }: { video: Video; large?: bool
         </span>
       </Link>
       <VideoLabel video={video} />
-      <h3 className={`m-0 font-serif ${large ? "text-h2" : "text-h3"}`}>
+      <Heading className={`m-0 font-serif ${large ? "text-h2" : "text-h3"}`}>
         <Link href={videoHref(video)} className="link-quiet">
           <Headline title={video.title} accent={video.titleAccent} accentColor="text-sand" />
         </Link>
-      </h3>
+      </Heading>
       <p className="text-stone m-0 max-w-[34rem] font-serif text-[1.0625rem] leading-relaxed italic">
         «{video.dek}»
       </p>

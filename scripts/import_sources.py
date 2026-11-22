@@ -338,7 +338,7 @@ ARTICLES = [
                         {"when": "2025-yil iyun", "what": "Timur Ishmetov: bozorni tartibga solish rejalashtirilgan"},
                         {"when": "2026-yil yanvar", "what": "Sanjar Nosirov: alohida qaror va alohida qonun tayyorlanadi"},
                         {"when": "2026-yil 14-avgust", "what": "PQ-294-son qaror imzolandi"},
-                        {"when": "2026-yil 1-dekabr", "what": "Markaziy bank va Soliq qoʻmitasi aniqlash tartibini ishlab chiqadi"},
+                        {"when": "2026-yil 1-dekabrgacha", "what": "Markaziy bank va Soliq qoʻmitasi aniqlash tartibini ishlab chiqadi"},
                         {"when": "2027-yil 1-yanvar", "what": "Operator faqat Markaziy bank reyestriga kirgandan keyin ishlaydi"},
                     ],
                 }

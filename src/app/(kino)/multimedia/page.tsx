@@ -25,7 +25,7 @@ export default function MultimediaPage() {
       <div className="mt-12 grid gap-16 md:mt-16 lg:grid-cols-12 lg:gap-x-10">
         {videos.map((v, i) => (
           <div key={v.slug} className={i === 0 ? "lg:col-span-8" : "lg:col-span-6 lg:col-start-7"}>
-            <VideoCard video={v} large={i === 0} />
+            <VideoCard video={v} large={i === 0} level="h2" />
           </div>
         ))}
       </div>

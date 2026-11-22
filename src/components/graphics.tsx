@@ -81,7 +81,7 @@ export function PriceTagBody({ g, size = "md" }: { g: PriceGraphic; size?: "md" 
       />
       <div>
         <p className="label m-0">{g.before.label}</p>
-        <p className="figure text-ink-muted relative m-0 mt-1.5 inline-block text-xl md:text-2xl">
+        <p className="figure text-ink-muted relative m-0 mt-1.5 inline-block text-lg md:text-xl">
           <FigureValue value={g.before.value} />
           <span
             aria-hidden="true"
@@ -288,6 +288,14 @@ function Growth({ g }: { g: GrowthGraphic }) {
 /* Composition: one stacked bar + a legend with dotted leaders */
 const segmentTones = ["bg-forest", "bg-brass", "bg-ink-soft", "bg-dots", "bg-photo-3", "bg-stone"];
 
+/** Segment colours: the accent item is terracotta, the rest take the neutral tones in order. */
+export function compositionTones(items: { accent?: boolean }[]) {
+  let n = 0;
+  return items.map((item) =>
+    item.accent ? "bg-terracotta" : segmentTones[n++ % segmentTones.length],
+  );
+}
+
 export function CompositionBody({
   g,
   tone = "light",
@@ -296,10 +304,7 @@ export function CompositionBody({
   tone?: "light" | "dark";
 }) {
   const sum = g.items.reduce((s, i) => s + i.v, 0);
-  let n = 0;
-  const colours = g.items.map((item) =>
-    item.accent ? "bg-terracotta" : segmentTones[n++ % segmentTones.length],
-  );
+  const colours = compositionTones(g.items);
   return (
     <div>
       <p className="m-0 mb-3 flex items-baseline justify-between gap-4 font-sans">
@@ -392,9 +397,11 @@ export function FiguresBody({
             {item.label}
           </dt>
           <dd
-            className={`figure m-0 text-[2.25rem] leading-none tracking-[-0.04em] md:text-[2.75rem] ${
-              tone === "dark" ? "text-paper" : "text-forest"
-            }`}
+            className={`figure m-0 leading-none tracking-[-0.04em] ${
+              item.value.length > 12
+                ? "text-[1.625rem] leading-tight md:text-[2rem]"
+                : "text-[2.25rem] md:text-[2.75rem]"
+            } ${tone === "dark" ? "text-paper" : "text-forest"}`}
           >
             {item.value.length <= 8 ? (
               <CountUp value={item.value} />

@@ -32,7 +32,13 @@ const colours = [
     role: "Logotip, havolalar, haftalik xat",
     cls: "bg-forest",
   },
-  { name: "Qum", token: "sand", hex: "#E3D4B6", role: "Tahlil bloklari", cls: "bg-sand" },
+  {
+    name: "Qum",
+    token: "sand",
+    hex: "#E3D4B6",
+    role: "Raqamlar bloki, grafik muqovalar",
+    cls: "bg-sand",
+  },
   {
     name: "Terrakota",
     token: "terracotta",
@@ -138,7 +144,7 @@ const typeStyles = [
   {
     token: "text-ui",
     spec: "Commissioner 500 · 15.5",
-    sample: "Maqolalar · Videolar · Tahlil · Qoʻllanmalar",
+    sample: "Maqolalar · Multimedia",
     cls: "text-ui font-sans font-medium",
   },
   {

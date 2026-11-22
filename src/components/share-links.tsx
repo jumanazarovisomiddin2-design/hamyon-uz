@@ -4,17 +4,32 @@ import { useState } from "react";
 
 /** Telegram share + copy link. Works without any third-party script. */
 export function ShareLinks({ url, title }: { url: string; title: string }) {
-  const [copied, setCopied] = useState(false);
+  const [state, setState] = useState<"idle" | "copied" | "failed">("idle");
   const tg = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
 
   async function copy() {
+    let ok = false;
     try {
       await navigator.clipboard.writeText(url);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      ok = true;
     } catch {
-      /* clipboard not available — nothing to do */
+      // Older browsers / blocked permission: copy through a temporary text field.
+      const field = document.createElement("textarea");
+      field.value = url;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      try {
+        ok = document.execCommand("copy");
+      } catch {
+        ok = false;
+      }
+      field.remove();
     }
+    setState(ok ? "copied" : "failed");
+    setTimeout(() => setState("idle"), 2500);
   }
 
   return (
@@ -33,7 +48,11 @@ export function ShareLinks({ url, title }: { url: string; title: string }) {
         className="text-forest cursor-pointer border-0 bg-transparent p-0 py-2 font-medium hover:underline"
         aria-live="polite"
       >
-        {copied ? "Nusxalandi ✓" : "Havolani nusxalash"}
+        {state === "copied"
+          ? "Nusxalandi ✓"
+          : state === "failed"
+            ? "Nusxalab boʻlmadi — manzilni brauzerdan oling"
+            : "Havolani nusxalash"}
       </button>
     </span>
   );

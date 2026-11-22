@@ -12,11 +12,11 @@ import type { Video } from "@/content";
 export function VideoPoster({
   video,
   sizes,
-  priority = false,
+  preload = false,
 }: {
   video: Video;
   sizes: string;
-  priority?: boolean;
+  preload?: boolean;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
 
@@ -44,7 +44,7 @@ export function VideoPoster({
         alt={video.posterAlt}
         fill
         sizes={sizes}
-        priority={priority}
+        preload={preload}
         className="object-cover"
       />
       {video.preview && (

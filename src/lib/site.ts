@@ -14,7 +14,7 @@ export const site = {
   lang: "uz",
 
   /** Real address. Set NEXT_PUBLIC_SITE_URL in .env.local / hosting settings. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://hamyon.uz",
 
   /**
    * Search engines are kept out until launch.

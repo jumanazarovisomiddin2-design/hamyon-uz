@@ -120,7 +120,7 @@ export default async function VideoPage({ params }: PageProps<"/multimedia/[slug
                 aria-hidden="true"
                 className="block aspect-[16/10] overflow-hidden"
               >
-                <ArticleCover cover={related.cover} sizes="22rem" />
+                <ArticleCover article={related} sizes="22rem" />
               </Link>
             )}
           </div>

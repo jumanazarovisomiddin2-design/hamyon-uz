@@ -18,6 +18,7 @@
   --color-sand: #e3d4b6; /* Tahlil sections, secondary blocks */
   --color-forest: #1e3a2c; /* wordmark, links, newsletter block */
   --color-terracotta: #a9472a; /* one accent: kicker, italic word, numbers */
+  --color-terracotta-deep: #8f3a20; /* the same accent for small text on sand (contrast) */
   --color-brass: #9c7d3c; /* hairlines and icons only — never small text */
   --color-charcoal: #211f1b; /* text; the dark "cinema" video sections */
 
@@ -40,12 +41,11 @@
   /* ── Typefaces ──────────────────────────────────────────────────────── */
   --font-*: initial;
   /* Headlines and reading text. Optical sizes adjust automatically. */
-  --font-serif: "Source Serif 4 Variable", Georgia, "Times New Roman", serif;
+  --font-serif: var(--ff-serif), Georgia, "Times New Roman", serif;
   /* Menus, labels, buttons, captions. */
-  --font-sans:
-    "Commissioner Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: var(--ff-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   /* Numbers only: prices, durations, dates, reading time, ".uz". */
-  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-mono: var(--ff-mono), ui-monospace, "SF Mono", Menlo, monospace;
 
   /* ── Type scale (fluid: phone 390px → desktop 1440px) ────────────── */
   --text-display-xl: clamp(2.875rem, 1.343rem + 6.286vw, 7rem); /* 46 → 112, article opening */
@@ -271,6 +271,11 @@
   background: transparent;
   color: inherit;
   cursor: pointer;
+}
+
+/* Small accent text on sand needs the deeper terracotta to stay readable (WCAG AA). */
+.on-sand .text-terracotta {
+  color: var(--color-terracotta-deep);
 }
 
 /* ── Article text ─────────────────────────────────────────────────────── */

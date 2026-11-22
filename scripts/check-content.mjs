@@ -36,6 +36,18 @@ function normalize(s) {
 const numberTokens = (s) =>
   new Set((normalize(s).match(/\d+(?:[ ]\d{3})*(?:[.,]\d+)?/g) ?? []).map((t) => t));
 
+/** "88 trln 147 mlrd" → 88147 (mlrd), "−1,3%" → -1.3, "taxminan 125 dollar" → 125 */
+function amount(value) {
+  const v = normalize(value);
+  const sign = /^[−-]/.test(v) ? -1 : 1;
+  const trln = v.match(/(\d+(?:,\d+)?) trln(?: (\d+) mlrd)?/);
+  if (trln && !/%/.test(v.split("trln")[0])) {
+    return sign * (Number(trln[1].replace(",", ".")) * 1000 + Number(trln[2] ?? 0));
+  }
+  const n = v.match(/\d+(?:[ ]\d{3})*(?:,\d+)?/);
+  return n ? sign * Number(n[0].replace(/ /g, "").replace(",", ".")) : null;
+}
+
 const errors = [];
 const fail = (where, msg) => errors.push(`✗ ${where}: ${msg}`);
 
@@ -96,6 +108,24 @@ for (const file of files) {
         if (!known.has(n))
           fail(where, `infographic «${b.title ?? kind}» shows ${n}, which is not in the article`);
       }
+    }
+  }
+  // Bar lengths must match the numbers printed next to them, and composition
+  // parts must add up to the total shown.
+  for (const b of a.body.filter((b) => ["bars", "growth", "composition"].includes(b.kind))) {
+    for (const item of b.items) {
+      const shown = amount(item.value);
+      if (shown === null || Math.abs(shown - item.v) > 1e-9)
+        fail(
+          where,
+          `«${b.title}»: «${item.label}» is drawn as ${item.v} but labelled ${item.value}`,
+        );
+    }
+    if (b.kind === "composition") {
+      const sum = b.items.reduce((s, i) => s + i.v, 0);
+      const total = /%/.test(b.items[0].value) ? 100 : amount(b.total.value);
+      if (Math.abs(sum - total) > 1e-6)
+        fail(where, `«${b.title}»: parts add up to ${sum}, total is ${total}`);
     }
   }
   if (!fullText.includes(normalize(a.excerpt)))

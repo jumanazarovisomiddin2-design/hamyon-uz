@@ -15,6 +15,7 @@ export async function generateMetadata({
   if (!f) return {};
   return {
     title: `${f.plural} — Maqolalar`,
+    description: `HAMYON.UZ maqolalari: ${f.plural.toLowerCase()}.`,
     alternates: { canonical: `/maqolalar/turi/${f.key}` },
   };
 }

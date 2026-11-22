@@ -6,11 +6,13 @@ import {
   plainText,
   seriesParts,
   type Article,
-  type Cover,
+  type Block,
+  type CompositionGraphic,
   type SeriesKey,
 } from "@/content";
 import { readingMinutes } from "@/lib/format";
 import { FigureValue } from "./figure-value";
+import { compositionTones } from "./graphics";
 import { Reveal } from "./motion";
 
 /** The headline with its one accent phrase in terracotta italic. */
@@ -90,18 +92,20 @@ export function ArticleLabel({ article, tone }: { article: Article; tone?: "ligh
  * editors' video, or a typographic cover built from numbers in the article.
  */
 export function ArticleCover({
-  cover,
+  article,
   sizes = "100vw",
-  priority = false,
+  preload = false,
   className = "",
   big = false,
 }: {
-  cover: Cover;
+  article: Article;
   sizes?: string;
-  priority?: boolean;
+  preload?: boolean;
   className?: string;
   big?: boolean;
 }) {
+  const cover = article.cover;
+  if (!cover) return null;
   if (cover.kind === "image") {
     return (
       <Image
@@ -110,17 +114,18 @@ export function ArticleCover({
         width={cover.width}
         height={cover.height}
         sizes={sizes}
-        priority={priority}
+        preload={preload}
         className={`h-full w-full object-cover ${className}`}
       />
     );
   }
+  // Sized by the cover's own width (container queries), so a narrow tile never clips.
   const huge = big
-    ? "text-[3.5rem] md:text-[5.5rem] xl:text-[6.5rem]"
-    : "text-[2.75rem] md:text-[3.5rem]";
+    ? "text-[3rem] @[30rem]:text-[4.5rem] @[48rem]:text-[6.5rem]"
+    : "text-[2.25rem] @[17rem]:text-[2.75rem] @[24rem]:text-[3.5rem]";
   return (
     <div
-      className={`bg-sand text-charcoal relative flex h-full w-full flex-col overflow-hidden ${
+      className={`bg-sand on-sand text-charcoal @container relative flex h-full w-full flex-col overflow-hidden ${
         big ? "justify-center gap-6 p-6 md:p-12 lg:p-16" : "justify-between p-5 md:p-7"
       } ${className}`}
       aria-hidden="true"
@@ -145,7 +150,7 @@ export function ArticleCover({
       )}
       {cover.variant === "limits" && (
         <p
-          className={`figure m-0 flex items-baseline gap-4 leading-none tracking-[-0.05em] ${huge}`}
+          className={`figure m-0 flex flex-wrap items-baseline gap-x-4 leading-none tracking-[-0.05em] ${huge}`}
         >
           <span>
             <FigureValue value={cover.a ?? ""} unitClass="text-[0.4em] tracking-normal" />
@@ -155,7 +160,7 @@ export function ArticleCover({
       )}
       {cover.variant === "change" && (
         <p
-          className={`figure m-0 flex items-baseline gap-3 leading-none tracking-[-0.05em] ${huge}`}
+          className={`figure m-0 flex flex-wrap items-baseline gap-x-3 leading-none tracking-[-0.05em] ${huge}`}
         >
           <span className="text-ink-muted relative">
             {cover.a}
@@ -168,28 +173,38 @@ export function ArticleCover({
       {cover.variant === "composition" && (
         <div className="flex flex-col gap-4">
           <p
-            className={`figure m-0 leading-none tracking-[-0.05em] whitespace-nowrap ${big ? huge : "text-[2.25rem] md:text-[2.75rem]"}`}
+            className={`figure m-0 leading-none tracking-[-0.05em] whitespace-nowrap ${big ? huge : "text-[1.75rem] @[17rem]:text-[2.25rem] @[24rem]:text-[2.75rem]"}`}
           >
             {cover.a}
           </p>
-          {/* proportions of the seven loan types in the article */}
-          <div className="flex h-5 gap-[2px]">
-            {[88147, 51141, 46744, 40503, 6844, 5914, 508].map((v, i) => (
-              <span
-                key={v}
-                className={
-                  i === 0
-                    ? "bg-terracotta"
-                    : ["bg-forest", "bg-brass", "bg-ink-soft", "bg-stone", "bg-paper", "bg-dots"][
-                        i - 1
-                      ]
-                }
-                style={{ width: `${(v / 239801) * 100}%`, minWidth: 3 }}
-              />
-            ))}
-          </div>
+          <CompositionStrip article={article} />
         </div>
       )}
+    </div>
+  );
+}
+
+/**
+ * Thin stacked bar for a cover — the same data (and colours) as the article's
+ * own composition infographic, so the two can never disagree.
+ */
+function CompositionStrip({ article }: { article: Article }) {
+  const g = article.body.find(
+    (b): b is Extract<Block, { type: "graphic" }> & CompositionGraphic =>
+      b.type === "graphic" && b.kind === "composition",
+  );
+  if (!g) return null;
+  const tones = compositionTones(g.items);
+  const sum = g.items.reduce((s, i) => s + i.v, 0);
+  return (
+    <div className="flex h-5 gap-[2px]">
+      {g.items.map((item, i) => (
+        <span
+          key={item.label}
+          className={tones[i]}
+          style={{ width: `${(item.v / sum) * 100}%`, minWidth: 3 }}
+        />
+      ))}
     </div>
   );
 }
@@ -210,7 +225,7 @@ export function PhotoPlaceholder({
       aria-label={`Foto oʻrni: ${brief}`}
       className={`bg-photo-1 text-paper flex flex-col ${className}`}
     >
-      <span className="figure p-3 text-[0.65rem] tracking-[0.12em] opacity-90 md:p-4">
+      <span className="figure p-3 text-[0.65rem] tracking-[0.12em] md:p-4">
         FOTO KERAK · {shot.toUpperCase()}
       </span>
       <span className="text-small max-w-[26rem] p-3 pt-0 font-sans md:p-4 md:pt-0">{brief}</span>
@@ -247,7 +262,7 @@ export function ArticleRow({ article, index }: { article: Article; index: number
           className="order-first block aspect-[16/10] overflow-hidden md:order-none"
         >
           <ArticleCover
-            cover={article.cover}
+            article={article}
             sizes="(min-width: 1024px) 22rem, (min-width: 768px) 18rem, 100vw"
           />
         </Link>

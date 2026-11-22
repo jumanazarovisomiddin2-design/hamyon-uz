@@ -1,12 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { site } from "@/lib/site";
 
-// Typefaces — self-hosted (no Google request), with Uzbek Latin + Cyrillic.
-import "@fontsource-variable/source-serif-4/opsz.css";
-import "@fontsource-variable/source-serif-4/opsz-italic.css";
-import "@fontsource-variable/commissioner/wght.css";
-import "@fontsource/ibm-plex-mono/400.css";
-import "@fontsource/ibm-plex-mono/500.css";
+import { mono, sans, serif } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,6 +19,7 @@ export const metadata: Metadata = {
     title: site.name,
     description: site.description,
   },
+  twitter: { card: "summary_large_image" },
   robots: site.allowIndexing ? { index: true, follow: true } : { index: false, follow: false },
 };
 
@@ -34,7 +30,11 @@ export const viewport: Viewport = {
 /** The page frame shared by every page. Header and footer live in the group layouts. */
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang={site.lang} className="h-full" suppressHydrationWarning>
+    <html
+      lang={site.lang}
+      className={`h-full ${serif.variable} ${sans.variable} ${mono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         {/* Turns on the scroll-in motion (globals.css). Without it, everything is simply shown. */}
         <script

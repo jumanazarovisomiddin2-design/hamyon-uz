@@ -124,3 +124,23 @@ and rhythm. Design canvas: https://claude.ai/artifact/4oPhCSTSR2svKs4CLDLK4V
 - Motion: six patterns (count-up, price strike, bars grow, tracking fill, receipt slide, tag swing),
   once in view, ≤900 ms, transform/opacity, off with "reduce motion"; reading progress uses CSS
   scroll timelines (no JavaScript).
+
+## Final audit (2026-11-22)
+
+- **Real 404s**: `src/proxy.ts` answers unknown article, format and video addresses with status 404
+  (streamed pages would otherwise say "200 OK" while showing the not-found page).
+- **Fonts through `next/font/local`** (same Fontsource files, Latin subsets): preloaded, with
+  size-matched fallbacks, so the page no longer jumps when fonts arrive (layout shift 0.18 → 0).
+  The Latin files cover every character on the site, including ʻ and ʼ. Cyrillic (only on the
+  internal style guide) now falls back to system fonts.
+- **Loan-type cover** reads the article's own composition data (no hand-typed numbers).
+- **Content guard** also checks that every bar length matches its printed number and that
+  composition parts add up to the total.
+- Old addresses redirect in one hop (308). Removed pieces go straight to `/maqolalar`.
+- Default share image `src/app/opengraph-image.png`; articles without a photo use their video's
+  poster or this image. Canonical URLs on every page; `site.url` defaults to `https://hamyon.uz`.
+- Contrast: small terracotta text on sand uses `terracotta-deep` (#8f3a20) to meet WCAG AA.
+- Copy-link button has a fallback for browsers that block the clipboard.
+- Browser testing: automated in Chromium only (Firefox/WebKit downloads are blocked in the build
+  environment). Code reviewed for Safari 16.4+/Firefox 128+ (Tailwind 4's baseline); the
+  scroll-linked progress bar is feature-guarded.

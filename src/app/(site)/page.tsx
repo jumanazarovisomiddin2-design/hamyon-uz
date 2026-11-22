@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   articleHref,
@@ -21,6 +22,8 @@ import { CompositionBody, GrowthBody, PriceTagBody } from "@/components/graphics
 import { Reveal } from "@/components/motion";
 import { VideoCard } from "@/components/video-parts";
 import { newsletterAnchor } from "@/lib/site";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 /** First infographic of a kind in an article. */
 function graphicOf<K extends Graphic["kind"]>(a: Article, kind: K) {
@@ -80,7 +83,7 @@ export default function HomePage() {
               />
             )}
             {leadTag && (
-              <Reveal className="group relative -mt-16 ml-4 max-w-[19rem] sm:ml-8 lg:absolute lg:bottom-10 lg:-left-16 lg:mt-0 lg:ml-0">
+              <Reveal className="group relative -mt-16 ml-4 max-w-[19rem] sm:ml-8 lg:absolute lg:-bottom-8 lg:-left-6 lg:mt-0 lg:ml-0 xl:bottom-10 xl:-left-16">
                 <div className="swing [transform:rotate(-2deg)] shadow-[0_10px_24px_rgba(33,31,27,0.18)] [--tilt:-2deg]">
                   <PriceTagBody g={{ ...leadTag, diff: undefined }} />
                 </div>
@@ -93,7 +96,7 @@ export default function HomePage() {
       {/* 2 · Vitrina — the newest articles, few and spacious */}
       <section aria-labelledby="vitrina" className="page mt-section">
         <hr className="perforation" />
-        <div className="flex flex-col gap-5 pt-8 md:flex-row md:items-end md:justify-between">
+        <div className="flex flex-col gap-5 pt-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex flex-col gap-2">
             <p className="label m-0">Vitrina · maqolalar</p>
             <h2 id="vitrina" className="text-section m-0 font-serif">
@@ -138,7 +141,7 @@ export default function HomePage() {
               >
                 {a.cover && (
                   <ArticleCover
-                    cover={a.cover}
+                    article={a}
                     big={i === 0}
                     sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 82vw"
                   />
@@ -164,7 +167,7 @@ export default function HomePage() {
       </section>
 
       {/* 3 · Data story — numbers from the household-debt article */}
-      <section aria-labelledby="raqamlar" className="bg-sand mt-section py-band">
+      <section aria-labelledby="raqamlar" className="bg-sand on-sand mt-section py-band">
         <div className="page grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="flex flex-col gap-5 lg:col-span-4">
             <p className="label text-ink-soft m-0">Raqamlar gapiradi</p>

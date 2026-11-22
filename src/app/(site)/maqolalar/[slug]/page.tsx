@@ -33,7 +33,9 @@ export async function generateMetadata({
   const { slug } = await params;
   const a = getArticle(slug);
   if (!a) return {};
-  const image = a.cover?.kind === "image" ? a.cover.src : undefined;
+  // Share image: the article's own frame, else its video's poster, else the site image.
+  const image =
+    a.cover?.kind === "image" ? a.cover.src : (videoFor(a)?.poster ?? "/opengraph-image.png");
   return {
     title: a.title,
     description: a.excerpt,
@@ -43,7 +45,7 @@ export async function generateMetadata({
       title: a.title,
       description: a.excerpt,
       url: articleHref(a),
-      images: image ? [{ url: image }] : undefined,
+      images: [{ url: image }],
     },
   };
 }
@@ -115,12 +117,7 @@ export default async function ArticlePage({ params }: PageProps<"/maqolalar/[slu
           <div
             className={`overflow-hidden ${article.cover.kind === "image" ? "aspect-[16/9]" : "aspect-[4/3] md:aspect-[5/2] xl:aspect-[3/1]"}`}
           >
-            <ArticleCover
-              cover={article.cover}
-              priority
-              big
-              sizes="(min-width: 1440px) 1280px, 100vw"
-            />
+            <ArticleCover article={article} preload big sizes="(min-width: 1440px) 1280px, 100vw" />
           </div>
           {article.cover.kind === "image" && article.cover.credit && (
             <figcaption className="text-small text-ink-muted mt-3 font-sans">
