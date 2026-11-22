@@ -16,9 +16,17 @@ export default function NotFound() {
             <p className="text-lead text-ink-soft m-0">
               Manzil notoʻgʻri yozilgan yoki sahifa hali tayyorlanmoqda.
             </p>
-            <Link href="/" className="btn mt-2 self-start no-underline">
-              Bosh sahifaga qaytish
-            </Link>
+            <div className="mt-2 flex flex-wrap gap-3">
+              <Link href="/" className="btn no-underline">
+                Bosh sahifaga qaytish
+              </Link>
+              <Link href="/maqolalar" className="btn no-underline">
+                Maqolalar
+              </Link>
+              <Link href="/multimedia" className="btn no-underline">
+                Multimedia
+              </Link>
+            </div>
           </div>
         </section>
       </main>

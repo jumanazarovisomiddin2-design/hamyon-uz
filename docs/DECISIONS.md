@@ -105,3 +105,22 @@ and rhythm. Design canvas: https://claude.ai/artifact/4oPhCSTSR2svKs4CLDLK4V
   centred reading column below that. Text column never wider than 700 px.
 - **Videos** load YouTube only when the reader presses play (youtube-nocookie.com).
 - Not built yet (outside stage 3): "Biz haqimizda" page and search (`/qidiruv`).
+
+## Concept v2 implementation (2026-11-22)
+
+- **Two sections**: MAQOLALAR (`/maqolalar`, formats as filters at `/maqolalar/turi/[format]`) and
+  MULTIMEDIA (`/multimedia`). Tahlil, Qoʻllanmalar and Videolar addresses redirect.
+- **Content is verbatim.** The six pieces Claude had written earlier were removed, and so were
+  Claude's deks, key-takeaway boxes and edits inside the authors' texts. Original typos are kept.
+  Typography only: oʻ gʻ ʼ « ». Guarded by `npm run check:content` before every build.
+- **Five articles** from the authors' files (3 Nasiya articles, household debt, credit limits) and
+  **two videos** (1.mp4 "Nasiya tarixi", 2.mp4 "Nasiya: qulaylikmi yoki qimmat qarz?").
+- Byline "Tahririyat". No publication dates are shown until the editors supply real ones.
+- The expert's name in article 2 ("…..") is shown as a visible placeholder.
+- Video posters and 6-second silent previews are frames from the finished videos (no interview
+  footage). Videos show "YouTubeʼda tez orada" until links exist. Scripts are labelled as scripts.
+- Header has just the two section links on every screen size, so the hidden mobile menu was removed.
+  The search icon was removed until search exists.
+- Motion: six patterns (count-up, price strike, bars grow, tracking fill, receipt slide, tag swing),
+  once in view, ≤900 ms, transform/opacity, off with "reduce motion"; reading progress uses CSS
+  scroll timelines (no JavaScript).

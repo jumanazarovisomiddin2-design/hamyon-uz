@@ -7,7 +7,7 @@ export function FigureValue({ value, unitClass = "" }: { value: string; unitClas
   return (
     <>
       {tokens.map((t, i) =>
-        /[a-zʻʼ]/i.test(t) ? (
+        /[a-zʻʼ]/i.test(t) || /^\s+$/.test(t) ? (
           <span key={i} className={`font-serif tracking-normal ${unitClass}`}>
             {t}
           </span>

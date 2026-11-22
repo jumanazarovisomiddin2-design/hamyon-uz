@@ -10,7 +10,9 @@
     "typecheck": "next typegen && tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "npm run typecheck && npm run lint && npm run format:check"
+    "check": "npm run check:content && npm run typecheck && npm run lint && npm run format:check",
+    "check:content": "node scripts/check-content.mjs",
+    "prebuild": "node scripts/check-content.mjs"
   },
   "dependencies": {
     "@fontsource-variable/commissioner": "^5.3.0",

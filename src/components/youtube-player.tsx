@@ -6,7 +6,15 @@ import { useState } from "react";
  * Loads YouTube only after the reader presses play — the page stays fast
  * and no YouTube cookies are set before that (youtube-nocookie.com).
  */
-export function YouTubePlayer({ id, title }: { id: string; title: string }) {
+export function YouTubePlayer({
+  id,
+  title,
+  poster,
+}: {
+  id: string;
+  title: string;
+  poster?: string;
+}) {
   const [playing, setPlaying] = useState(false);
 
   if (playing) {
@@ -30,7 +38,7 @@ export function YouTubePlayer({ id, title }: { id: string; title: string }) {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`}
+        src={poster ?? `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`}
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
       />

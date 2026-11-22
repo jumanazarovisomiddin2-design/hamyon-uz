@@ -3,8 +3,11 @@ import Link from "next/link";
 type Size = "sm" | "md" | "lg";
 
 const sizes: Record<Size, { word: string; uz: string }> = {
-  sm: { word: "text-2xl", uz: "text-[0.625rem]" }, // article header on phones
-  md: { word: "text-[1.875rem] md:text-[2.5rem]", uz: "text-[0.6875rem] md:text-sm" }, // site header
+  sm: { word: "text-2xl", uz: "text-[0.625rem]" }, // small
+  md: {
+    word: "text-[1.625rem] sm:text-[1.875rem] md:text-[2.5rem]",
+    uz: "text-[0.6875rem] md:text-sm",
+  }, // site header
   lg: { word: "text-[2.75rem] md:text-[3.5rem]", uz: "text-sm md:text-base" }, // footer
 };
 

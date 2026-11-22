@@ -1,0 +1,340 @@
+{
+  "slug": "2027-yildan-nasiya-bozori",
+  "title": "2027-yildan nasiya bozori qanday oʻzgaradi?",
+  "titleAccent": "qanday oʻzgaradi",
+  "format": "tushuntirish",
+  "order": 3,
+  "author": "Tahririyat",
+  "publishedAt": null,
+  "series": "nasiya-sovga-emas",
+  "excerpt": "2027-yil 1-yanvardan bunday manzara oʻzgaradi. Prezidentning 2026-yil 14-avgustdagi PQ-294-son qaroriga koʻra, nasiya bozori ilk bor alohida qoidalar bilan tartibga solinmoqda.",
+  "cover": {
+    "kind": "graphic",
+    "variant": "limits",
+    "a": "12 oy",
+    "b": "50%",
+    "meta": "PQ-294-son qaror · 2027-yil 1-yanvardan"
+  },
+  "photo": null,
+  "body": [
+    {
+      "type": "p",
+      "text": "Texnomart internet-doʻkonida 55 dyuymli Hisense 55E8Q televizori naqd pulga 6 733 000 soʻm turadi. Uning yonida yana bir narx bor: «Muddatli toʻlov 476 921 soʻmdan / 24 oy». Oyiga 477 ming soʻm — koʻpchilik uchun koʻtarsa boʻladigan summa."
+    },
+    {
+      "type": "p",
+      "text": "Endi oddiy hisob qilamiz: 476 921 × 24 = 11 446 104 soʻm. Yaʼni televizor naqd narxidan 4,7 mln soʻm qimmatga tushadi. Bu 70% ustama."
+    },
+    {
+      "type": "graphic",
+      "kind": "price",
+      "title": "Hisense 55E8Q televizori, Texnomart",
+      "before": {
+        "label": "Naqd narx",
+        "value": "6 733 000 soʻm"
+      },
+      "after": {
+        "label": "24 oyda jami",
+        "value": "11 446 104 soʻm"
+      },
+      "meta": ["476 921 soʻm × 24 oy"],
+      "diff": {
+        "label": "Ustama",
+        "value": "70%"
+      }
+    },
+    {
+      "type": "p",
+      "text": "Shu toʻlov jadvalini bank krediti bilan solishtirsak, u yillik taxminan 75% samarali stavkaga teng. Taqqoslash uchun: 2026-yil noyabrida banklarning mikroqarzlari boʻyicha oʻrtacha stavka yillik 27,5% atrofida boʻlgan."
+    },
+    {
+      "type": "graphic",
+      "kind": "bars",
+      "title": "Yillik samarali stavka",
+      "items": [
+        {
+          "label": "Shu muddatli toʻlov jadvali",
+          "value": "taxminan 75%",
+          "v": 75,
+          "accent": true
+        },
+        {
+          "label": "Banklarning mikroqarzlari, 2026-yil noyabr",
+          "value": "27,5% atrofida",
+          "v": 27.5
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "2027-yil 1-yanvardan bunday manzara oʻzgaradi. Prezidentning 2026-yil 14-avgustdagi PQ-294-son qaroriga koʻra, nasiya bozori ilk bor alohida qoidalar bilan tartibga solinmoqda."
+    },
+    {
+      "type": "h2",
+      "text": "Nega tartib kerak boʻldi?"
+    },
+    {
+      "type": "p",
+      "text": "Nasiya Oʻzbekistonda bir necha yil ichida ommaviy xarid usuliga aylandi. Markaziy bank maʼlumotiga koʻra, 2025-yil 1-yanvar holatida nasiya bilan bogʻliq kredit portfeli **8,5 trln soʻm**ni tashkil etgan. Uning atigi 7% i banklarga, 26% i ikkita mikromoliya tashkilotiga (MMT) toʻgʻri kelgan. Qolgan **67%** — qariyb 5,7 trln soʻm — bank ham, MMT ham boʻlmagan tadbirkorlik subyektlari: nasiya platformalari va doʻkonlar qoʻlida boʻlgan. Yaʼni bozorning uchdan ikki qismi Markaziy bank nazoratidan tashqarida ishlagan."
+    },
+    {
+      "type": "graphic",
+      "kind": "composition",
+      "title": "Nasiya bilan bogʻliq kredit portfeli, 2025-yil 1-yanvar",
+      "total": {
+        "label": "Jami",
+        "value": "8,5 trln soʻm"
+      },
+      "items": [
+        {
+          "label": "Banklar",
+          "value": "7%",
+          "v": 7
+        },
+        {
+          "label": "Ikkita mikromoliya tashkiloti",
+          "value": "26%",
+          "v": 26
+        },
+        {
+          "label": "Nasiya platformalari va doʻkonlar",
+          "value": "67% · qariyb 5,7 trln soʻm",
+          "v": 67,
+          "accent": true
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Regulyatorning asosiy xavotiri — yashirin qarz. Nasiya shartnomalarining aksariyati kredit byurolarida aks etmagan. Bank mijozga kredit berayotganda uning nasiya qarzlarini koʻrmagan va shu sababli qarz yuki meʼyoridan ortiq kredit bergan. Markaziy bank raisi Timur Ishmetov 2025-yil iyunida aynan shu muammoni koʻrsatib, bozorni tartibga solish rejalashtirilganini aytgan edi."
+    },
+    {
+      "type": "p",
+      "text": "Dastlab Markaziy bank nasiya standartlarini ishlab chiqib, soha uyushmalariga topshirdi. Ular ixtiyoriy edi. 2026-yil yanvarida Markaziy bank raisi oʻrinbosari Sanjar Nosirov keyingi bosqichda alohida qaror va alohida qonun tayyorlanishini maʼlum qildi. Avgustda qaror imzolandi. Qonun esa hali tayyorlanmoqda."
+    },
+    {
+      "type": "graphic",
+      "kind": "timeline",
+      "title": "Tartibga solish qadamlari",
+      "items": [
+        {
+          "when": "2025-yil iyun",
+          "what": "Timur Ishmetov: bozorni tartibga solish rejalashtirilgan"
+        },
+        {
+          "when": "2026-yil yanvar",
+          "what": "Sanjar Nosirov: alohida qaror va alohida qonun tayyorlanadi"
+        },
+        {
+          "when": "2026-yil 14-avgust",
+          "what": "PQ-294-son qaror imzolandi"
+        },
+        {
+          "when": "2026-yil 1-dekabr",
+          "what": "Markaziy bank va Soliq qoʻmitasi aniqlash tartibini ishlab chiqadi"
+        },
+        {
+          "when": "2027-yil 1-yanvar",
+          "what": "Operator faqat Markaziy bank reyestriga kirgandan keyin ishlaydi"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Qanday tartibga solinadi?"
+    },
+    {
+      "type": "p",
+      "text": "Qaror «muddatli toʻlov xizmati» degan tushunchani kiritadi. Uning mohiyati oddiy: **kompaniya xaridor uchun tovarning pulini doʻkonga toʻlab beradi, xaridor esa bu pulni unga ustama bilan boʻlib-boʻlib qaytaradi.** Masalan, siz Uzum Marketʼda telefonni Uzum Nasiya orqali olsangiz, doʻkonga pulni Uzum Nasiya toʻlaydi, siz esa Uzum Nasiyaʼga qarzdor boʻlasiz."
+    },
+    {
+      "type": "p",
+      "text": "Bu xizmatni koʻrsatadigan kompaniya **muddatli toʻlov xizmati operatori** deb ataladi. 2027-yil 1-yanvardan operator faqat Markaziy bank **reyestriga** kirgandan keyin ishlay oladi. Reyestrga kirmagan kompaniyaning bu ish bilan shugʻullanishi noqonuniy boʻladi."
+    },
+    {
+      "type": "p",
+      "text": "Banklar va MMTlar operator hisoblanmaydi — ular allaqachon Markaziy bank nazoratida. Ammo ular ham nasiya xizmati koʻrsatmoqchi boʻlsa, Markaziy bankni xabardor qilib reyestrga kiradi. Boshqa kompaniyalar esa Markaziy bankda hisob roʻyxatidan oʻtishi kerak."
+    },
+    {
+      "type": "h2",
+      "text": "Doʻkon tovarni oʻzi boʻlib sotsa-chi?"
+    },
+    {
+      "type": "p",
+      "text": "Qarorda sotuvchining xaridorga toʻgʻridan-toʻgʻri sotishi «muddatli toʻlov xizmati» tushunchasidan alohida istisno qilingan. Yaʼni mahalladagi mebel doʻkoni divanni oʻzi uch oyga boʻlib sotsa, bu operator faoliyati hisoblanmaydi."
+    },
+    {
+      "type": "p",
+      "text": "Lekin bu istisno cheksiz emas. Qarorning alohida bandiga koʻra, tovarni oʻzi nasiyaga sotadigan savdo tashkiloti ikki shart birga bajarilsa, operator kabi reyestrga kirishi va barcha talablarni bajarishi shart:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "choraklik savdo aylanmasi **500 mln soʻmdan** oshsa;",
+        "shu savdoning **kamida yarmi** boʻlib toʻlashga toʻgʻri kelsa."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Ishlab chiqaruvchi korxonalar bundan mustasno. Demak, kichik doʻkon erkin qoladi, savdosi asosan nasiyaga tayanadigan yirik tarmoq esa yangi qoidalar ichiga kiradi. Bunday tashkilotlarni aniqlash tartibini Markaziy bank va Soliq qoʻmitasi 2026-yil 1-dekabrgacha ishlab chiqishi kerak."
+    },
+    {
+      "type": "h2",
+      "text": "Asosiy oʻzgarishlar"
+    },
+    {
+      "type": "graphic",
+      "kind": "figures",
+      "title": "Yangi chegaralar",
+      "items": [
+        {
+          "value": "12 oy",
+          "label": "operator orqali nasiyaning eng uzoq muddati"
+        },
+        {
+          "value": "250 BHM",
+          "label": "tovar narxi chegarasi — 110 mln soʻm"
+        },
+        {
+          "value": "50%",
+          "label": "ustama, jarima va penya — yillik umumiy chegara"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "**1. Muddat — koʻpi bilan 12 oy.** Operator orqali tuziladigan nasiya shartnomasi boʻyicha xaridorning majburiyati shartnoma tuzilgan kundan boshlab 12 oydan oshmasligi kerak. 18, 24 yoki 36 oylik shartnoma endi nasiya emas, **isteʼmol krediti shartnomasi** deb hisoblanadi. Yaʼni u boshqa qoidalar asosida — kredit sifatida rasmiylashtiriladi."
+    },
+    {
+      "type": "p",
+      "text": "**2. Tovar narxi — koʻpi bilan 250 BHM.** Bazaviy hisoblash miqdori (BHM) 2026-yil 1-sentabrdan 440 ming soʻm. Demak, chegara — **110 mln soʻm**. Telefon, televizor, muzlatkich, mebel bu chegaradan ancha past. Chegaraga asosan avtomobil va qimmat uskunalar tegadi. BHM oshsa, soʻmdagi chegara ham avtomatik oshadi."
+    },
+    {
+      "type": "p",
+      "text": "**3. Koʻchmas mulkni operator orqali nasiyaga olib boʻlmaydi.** Qarorga koʻra, koʻchmas mulk, shuningdek, muomalasi taqiqlangan yoki cheklangan mulk muddatli toʻlov xizmatining obyekti boʻla olmaydi. Qaror chiqqach, ijtimoiy tarmoqlarda «endi uyni rassrochkaga olib boʻlmaydi» degan gaplar tarqaldi."
+    },
+    {
+      "type": "p",
+      "text": "Adliya vazirligi buni rad etdi: quruvchi oʻzi qurgan uyni xaridorga bevosita boʻlib toʻlash sharti bilan sotishi mumkin, chunki toʻgʻridan-toʻgʻri savdo qarorda istisno qilingan. Taqiq faqat vositachi kompaniya orqali uy sotib olishga tegishli."
+    },
+    {
+      "type": "p",
+      "text": "**4. Ustama yashirilmaydi.** Shartnomada operatorning ustamasi va yakuniy narxga qoʻshiladigan boshqa toʻlovlar alohida koʻrsatilishi shart. Bundan tashqari, doʻkonlarda va onlayn platformalarda tovarning bazaviy narxi, nasiya ustamasi va kreditning toʻliq qiymati **bir xil oʻlchamdagi harflarda** yozilishi kerak. «Oyiga atigi 477 ming soʻm»ni katta, haqiqiy narxni mayda harf bilan yozish endi mumkin boʻlmaydi. Reklamada ustama haqida chalgʻituvchi maʼlumot berish ham taqiqlanadi. Buni Raqobat qoʻmitasi Markaziy bank bilan birga nazorat qiladi."
+    },
+    {
+      "type": "p",
+      "text": "**5. Ustama va jarimaning umumiy chegarasi.** Asosiy qarzdan tashqari barcha toʻlovlar — ustama, vositachilik haqi, jarima, penya — yigʻindisi yiliga muddatli toʻlov summasining **yarmidan** oshmasligi kerak."
+    },
+    {
+      "type": "p",
+      "text": "Bu chegara qanchalik qattiq?"
+    },
+    {
+      "type": "p",
+      "text": "Oddiy misol: 10 mln soʻmlik tovar 12 oyga olinsa, xaridordan jami koʻpi bilan 5 mln soʻm qoʻshimcha toʻlov olinishi mumkin. Bu chegara aslida ancha keng: 12 oyda 50% ustama bank krediti hisobida yillik 120% dan ortiq samarali stavkaga teng. Yaʼni u bugungi odatdagi ustamalarni (koʻpincha 25–45%) taqiqlamaydi, faqat eng ogʻir holatlarni toʻxtatadi."
+    },
+    {
+      "type": "p",
+      "text": "Lekin bir muhim farq bor: **jarima va penya ham shu 50% ichiga kiradi.** Agar ustama 40% boʻlsa, toʻlovni kechiktirgan xaridordan yana koʻpi bilan 10% undirish mumkin. Bugungidek qarz jarimalar hisobiga cheksiz oʻsib boradigan holatlar boʻlmaydi."
+    },
+    {
+      "type": "graphic",
+      "kind": "receipt",
+      "title": "50% chegarasi: oddiy misol",
+      "lines": [
+        {
+          "label": "Tovar narxi",
+          "value": "10 mln soʻm"
+        },
+        {
+          "label": "Muddat",
+          "value": "12 oy"
+        },
+        {
+          "label": "Ustama boʻlsa",
+          "value": "40%"
+        },
+        {
+          "label": "Kechiktirganda yana koʻpi bilan",
+          "value": "10%"
+        }
+      ],
+      "total": {
+        "label": "Qoʻshimcha toʻlov, koʻpi bilan",
+        "value": "5 mln soʻm"
+      }
+    },
+    {
+      "type": "p",
+      "text": "**6. Muddatidan oldin toʻlash — jarimasiz.** Xaridor qarzni istalgan vaqtda, toʻliq yoki qisman, qoʻshimcha jarima, penya va komissiyasiz yopish huquqiga ega boʻladi."
+    },
+    {
+      "type": "p",
+      "text": "Bu yerda bitta ochiq savol bor. Qarorda oldin toʻlaganda **ustama kamayishi** haqida bevosita gap yoʻq. Masalan, 12 oylik nasiyani 4-oyda yopsangiz, qolgan 8 oyning ustamasidan ozod boʻlasizmi — bu hali nomaʼlum. Muddatidan oldin toʻlash tartibini Markaziy bank alohida belgilaydi."
+    },
+    {
+      "type": "p",
+      "text": "**7. Kredit byurosi va qarz yuki.** Operatorlar tuzgan **barcha** nasiya shartnomalari va ularning ijrosi haqida kredit byurolariga maʼlumot beradi. Bundan keyin bank kredit berayotganda mijozning nasiya qarzlarini ham koʻradi."
+    },
+    {
+      "type": "p",
+      "text": "Bundan tashqari, operator nasiya berishdan oldin mijozning **qarz yukini** tekshirishi shart — yaʼni daromadining qancha qismi qarz toʻlovlariga ketishini. Ruxsat etilgan eng yuqori darajani Markaziy bank belgilaydi. Mijoz shaxsi esa raqamli identifikatsiya va verifikatsiyadan oʻtkaziladi."
+    },
+    {
+      "type": "p",
+      "text": "Kichik shartnomalar uchun yengillik bor: tovarni oʻzi kreditga beradigan tashkilotlar 3 BHM (1,32 mln soʻm) gacha boʻlgan shartnomalar haqida kredit byurosiga maʼlumot bermasligi mumkin. Bu yengillik operatorlarga tegishli emas — ular barcha shartnomalar haqida maʼlumot beradi."
+    },
+    {
+      "type": "p",
+      "text": "**8. Operatorlarga taqiqlar.** Nasiya operatori odamlarga naqd pul qarz bera olmaydi va aholidan omonat yigʻa olmaydi (obligatsiya chiqarishga ruxsat bor). Qarzni esa faqat boshqa operator, MMT yoki bankka oʻtkazishi mumkin."
+    },
+    {
+      "type": "h2",
+      "text": "Doʻkonlar, platformalar va banklar uchun nima oʻzgaradi?"
+    },
+    {
+      "type": "p",
+      "text": "**Nasiya platformalari** uchun bu — eng katta oʻzgarish. Ular endi oddiy tijorat kompaniyasi emas, Markaziy bank nazoratidagi moliya bozori ishtirokchisi boʻladi. Ustav kapitalining eng kam miqdori, prudensial normativlar, axborot xavfsizligi va pul yuvishga qarshi kurash talablarini Markaziy bank belgilaydi. Bu xarajat talab qiladi, shuning uchun kichik oʻyinchilar bozordan chiqishi yoki yirik kompaniyalarga qoʻshilishi mumkin."
+    },
+    {
+      "type": "p",
+      "text": "**Doʻkonlar** uchun taʼsir ularning modeliga bogʻliq. Nasiyani platforma orqali beradigan doʻkon uchun kam narsa oʻzgaradi: talablar platformaga tushadi. Lekin narx yorligʻini qayta koʻrib chiqishga toʻgʻri keladi. Nasiyani oʻzi beradigan va savdosining yarmidan koʻpi nasiyaga toʻgʻri keladigan yirik tarmoqlar esa operator kabi roʻyxatdan oʻtishi kerak. 18–24 oylik takliflarni ular bank yoki MMT bilan hamkorlikda kredit sifatida berishga oʻtishi mumkin."
+    },
+    {
+      "type": "p",
+      "text": "**Banklar va MMTlar** yutishi mumkin. Birinchidan, 12 oydan uzun xaridlar ularning kredit mahsulotlariga oʻtadi. Ikkinchidan, kredit byurosida nasiya qarzlari koʻringach, mijozning haqiqiy qarz yukini baholash osonlashadi."
+    },
+    {
+      "type": "p",
+      "text": "Iqtisodchi Ikboljon Qosimov (Vazirlar Mahkamasi huzuridagi Biznes va tadbirkorlik oliy maktabi) Kursiv nashriga bergan izohida bir nechta xavfga eʼtibor qaratgan. Uning fikricha, kompaniyalar ustama chegarasini tovarning bazaviy narxini oshirish orqali chetlab oʻtishga urinishi mumkin. Shuning uchun naqd va nasiya narxlarini kuzatib borish kerak. Yana bir xavf — cheklangan mahsulotlarning «uzoq muddatli ijara» yoki «sotib olish huquqi bilan ijara» kabi boshqa nomlar ostida qaytishi. Bunday shartnomalarda xaridorning egalik va pulini qaytarib olish huquqlari zaifroq. Qimmat tovarlarda esa bitta xaridni bir nechta shartnomaga boʻlib, 110 mln soʻmlik chegarani aylanib oʻtish holatlari boʻlishi mumkin."
+    },
+    {
+      "type": "p",
+      "text": "Qosimov yana bir muhim jihatni taʼkidlaydi: kredit byurosidagi yozuv mijozni avtomatik rad etishga sabab boʻlmasligi kerak. Rasmiy daromadi yoʻq, ammo muntazam pul topadigan odamlar — oʻzini oʻzi band qilganlar, mavsumiy ishchilar — toʻlov tarixi va real pul oqimi boʻyicha ham baholanishi lozim."
+    },
+    {
+      "type": "h2",
+      "text": "Xaridor 2027-yilda nimaga eʼtibor berishi kerak?"
+    },
+    {
+      "type": "p",
+      "text": "**Muddatga qarang.** Agar sizga 18 yoki 24 oylik «nasiya» taklif qilinsa, bu aslida kredit shartnomasi. Kim bilan shartnoma tuzayotganingizni soʻrang: bankmi, MMTmi yoki operatormi?"
+    },
+    {
+      "type": "p",
+      "text": "**Kompaniya reyestrda bormi — tekshiring.** 2027-yildan Markaziy bank reyestriga kirmagan kompaniyaning nasiya xizmati qonunga zid boʻladi."
+    },
+    {
+      "type": "p",
+      "text": "**Narx yorligʻini toʻliq oʻqing.** Endi bazaviy narx, ustama va toʻliq qiymat bir xil harfda yozilishi kerak. Agar ustama koʻrsatilmagan yoki mayda harfda yozilgan boʻlsa, bu qoidabuzarlik. Bu haqda Raqobat qoʻmitasiga murojaat qilish mumkin."
+    },
+    {
+      "type": "p",
+      "text": "**Oldin toʻlash shartini soʻrang.** Jarima olinmaydi, lekin ustama qayta hisoblanadimi — shartnomadan aniqlang."
+    },
+    {
+      "type": "p",
+      "text": "**Har bir nasiya kredit tarixingizga yoziladi.** Kichik xaridlar ham kelajakda bank krediti yoki ipoteka olishingizga taʼsir qilishi mumkin. Vaqtida toʻlangan nasiya esa kredit tarixingizni yaxshilaydi."
+    }
+  ]
+}

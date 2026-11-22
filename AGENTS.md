@@ -18,6 +18,10 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Approved identity: Direction A "Chek" refined (see docs/DECISIONS.md). Serif = headlines + text,
   Commissioner = UI, Plex Mono = numbers only. Receipt hints max two per screen. Check `/dizayn-tizimi`.
 - Avoid: rounded-card grids, gradients, glassmorphism, stock-photo look, decorative animation.
-- Site name, sections and addresses live in `src/lib/site.ts`. Addresses are fixed — don't rename.
+- Two sections only: MAQOLALAR and MULTIMEDIA (formats are filters). Addresses live in
+  `src/lib/site.ts` and are fixed — don't rename.
+- Never change, add or remove sentences in the authors' texts; never invent data, quotes,
+  sources, experts or authors. Infographics use only numbers from their article.
+  `npm run check:content` enforces this.
 - Record significant decisions in `docs/DECISIONS.md`; update `docs/ROADMAP.md` when a stage finishes.
 - Run `npm run check` and `npm run build` before finishing any change.

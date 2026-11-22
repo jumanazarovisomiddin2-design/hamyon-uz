@@ -1,82 +1,82 @@
-import type { Story, StorySection } from "./types";
-import { story as historyArticle } from "./stories/nasiyaning-tort-ming-yillik-yoli";
-import { story as hiddenCost } from "./stories/foizsiz-nasiya-yashirin-kredit";
-import { story as rules2027 } from "./stories/2027-yildan-nasiya-bozori";
-import { story as fifteenOffers } from "./stories/bitta-telefon-15-ta-nasiya";
-import { story as whoUses } from "./stories/nasiya-mijozi-kim";
-import { story as fiveQuestions } from "./stories/nasiyadan-oldin-5-savol";
-import { story as checkZero } from "./stories/foizsiz-nasiyani-tekshirish";
-import { story as severalLoans } from "./stories/bir-nechta-nasiya-qaysi-birinchi";
-import { story as rules2027Guide } from "./stories/2027-nasiya-xaridor-uchun-5-qoida";
+/**
+ * All site content in one place, with small helpers for pages.
+ * To add an article: drop a JSON file in ./articles and import it below.
+ */
+import type { Article, FormatKey, Script, Video } from "./types";
+
+import a1 from "./articles/nasiyaning-tort-ming-yillik-yoli.json";
+import a2 from "./articles/foizsiz-nasiya-yashirin-kredit.json";
+import a3 from "./articles/2027-yildan-nasiya-bozori.json";
+import a4 from "./articles/aholining-banklar-oldidagi-qarzi.json";
+import a5 from "./articles/kredit-cheklovlari-va-mikroqarzlar.json";
+import videoList from "./videos.json";
+import s1 from "./scripts/nasiya-tarixi.json";
+import s2 from "./scripts/nasiya-qulaylikmi-yoki-qimmat-qarz.json";
 
 export * from "./types";
-export { videos, getVideo } from "./videos";
 
-/** Every published story, newest first. */
-export const stories: Story[] = [
-  historyArticle,
-  hiddenCost,
-  rules2027,
-  fifteenOffers,
-  whoUses,
-  fiveQuestions,
-  checkZero,
-  severalLoans,
-  rules2027Guide,
-].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+/** Newest first. Until real dates exist, `order` decides (higher = newer). */
+export const articles: Article[] = ([a1, a2, a3, a4, a5] as unknown as Article[]).sort(
+  (a, b) => b.order - a.order,
+);
 
-/** Homepage choices — what the editors put first. */
-export const frontPage = {
-  lead: hiddenCost,
-  weekly: [rules2027, fifteenOffers, historyArticle],
-  numberOfTheWeek: {
-    value: "72,6",
-    unit: "×",
-    label:
-      "Nasiya shartnomalari soni ikki yilda shuncha baravar oshdi: 2023-yil fevralidagi 13,5 mingtadan 2024-yil dekabrida 973 mingtaga.",
-    source: "Manba: Markaziy bank",
-    story: whoUses,
-  },
-};
+export const videos: Video[] = (videoList as Video[]).sort((a, b) => b.order - a.order);
 
-export const sectionInfo: Record<
-  StorySection,
-  { title: string; accent: string; description: string }
-> = {
-  maqolalar: {
-    title: "Maqolalar",
-    accent: "Maqolalar",
-    description:
-      "Nasiya, qarz va kundalik xaridlar haqida reportaj, tarix va tushuntirishlar — raqamlar bilan, sodda tilda.",
-  },
-  tahlil: {
-    title: "Tahlil",
-    accent: "Tahlil",
-    description:
-      "Rasmiy maʼlumotlar, narxlar va shartnomalar hisob-kitobi. Har bir raqamning manbasi koʻrsatiladi.",
-  },
-  qollanmalar: {
-    title: "Qoʻllanmalar",
-    accent: "Qoʻllanmalar",
-    description: "Qaror oldidan oʻqiladigan qisqa, amaliy matnlar va checklistlar.",
-  },
-};
+const scripts: Record<string, Script> = Object.fromEntries(
+  ([s1, s2] as Script[]).map((s) => [s.slug, s]),
+);
 
-export function getStory(section: StorySection, slug: string) {
-  return stories.find((s) => s.section === section && s.slug === slug);
+export const formats: { key: FormatKey; label: string; plural: string }[] = [
+  { key: "tahlil", label: "Tahlil", plural: "Tahlillar" },
+  { key: "tushuntirish", label: "Tushuntirish", plural: "Tushuntirishlar" },
+  { key: "uzun-oqish", label: "Uzun oʻqish", plural: "Uzun oʻqishlar" },
+  { key: "yangilik", label: "Yangilik", plural: "Yangiliklar" },
+];
+
+export const formatLabel = (key: FormatKey) => formats.find((f) => f.key === key)?.label ?? key;
+
+export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);
+export const getVideo = (slug: string) => videos.find((v) => v.slug === slug);
+export const getScript = (slug?: string) => (slug ? scripts[slug] : undefined);
+export const articlesIn = (format: FormatKey) => articles.filter((a) => a.format === format);
+
+export const articleHref = (a: Pick<Article, "slug">) => `/maqolalar/${a.slug}`;
+export const videoHref = (v: Pick<Video, "slug">) => `/multimedia/${v.slug}`;
+
+/** The video made from the same material as this article, if any. */
+export const videoFor = (a: Article) => videos.find((v) => v.related === a.slug);
+
+/** Turkum — a series that runs across articles and videos. */
+export const series = {
+  "nasiya-sovga-emas": {
+    title: "Nasiya — sovgʻa emas",
+    parts: [
+      { kind: "article", slug: "nasiyaning-tort-ming-yillik-yoli" },
+      { kind: "video", slug: "nasiya-tarixi" },
+      { kind: "article", slug: "foizsiz-nasiya-yashirin-kredit" },
+      { kind: "video", slug: "nasiya-qulaylikmi-yoki-qimmat-qarz" },
+      { kind: "article", slug: "2027-yildan-nasiya-bozori" },
+    ] as const,
+  },
+} as const;
+
+export type SeriesKey = keyof typeof series;
+
+export function seriesParts(key: SeriesKey) {
+  return series[key].parts.map((p) => {
+    if (p.kind === "article") {
+      const a = getArticle(p.slug)!;
+      return { kind: "Maqola", title: a.title, href: articleHref(a), slug: a.slug };
+    }
+    const v = getVideo(p.slug)!;
+    return { kind: "Video", title: v.title, href: videoHref(v), slug: v.slug };
+  });
 }
 
-export function storiesIn(section: StorySection) {
-  return stories.filter((s) => s.section === section);
-}
-
-export function storyHref(s: Pick<Story, "section" | "slug">) {
-  return `/${s.section}/${s.slug}`;
-}
-
-/** The numbered series these stories belong to, in reading order. */
-export function seriesParts(name: string) {
-  return stories
-    .filter((s) => s.series?.name === name)
-    .sort((a, b) => (a.series?.part ?? 0) - (b.series?.part ?? 0));
+/** Plain text of an article (for reading time and meta descriptions). */
+export function plainText(a: Article) {
+  return a.body
+    .map((b) => (b.type === "list" ? b.items.join(" ") : b.type === "graphic" ? "" : b.text))
+    .join(" ")
+    .replace(/\*+/g, "");
 }

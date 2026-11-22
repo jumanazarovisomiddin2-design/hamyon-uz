@@ -1,0 +1,289 @@
+{
+  "slug": "aholining-banklar-oldidagi-qarzi",
+  "title": "Aholining banklar oldidagi qarzi $20,3 milliardga yaqinlashdi",
+  "titleAccent": "$20,3 milliardga",
+  "format": "yangilik",
+  "order": 4,
+  "author": "Tahririyat",
+  "publishedAt": null,
+  "series": null,
+  "excerpt": "Qiziqarlisi, aholi qarzi banklarning umumiy kreditlaridan ham tezroq oʻsmoqda.",
+  "cover": {
+    "kind": "graphic",
+    "variant": "composition",
+    "a": "$20,3 mlrd",
+    "meta": "2026-yil 1-avgust holatiga"
+  },
+  "photo": null,
+  "body": [
+    {
+      "type": "p",
+      "text": "Oʻzbekiston Respublikasi Markaziy banki maʼlumotlariga koʻra, 2026-yil 1-avgust holatida aholining banklar oldidagi jami qarzi qariyb $20,3 milliardga yetgan."
+    },
+    {
+      "type": "p",
+      "text": "Hisob-kitobda 1 dollar 11 800 soʻmdan olingan. (Bu 2026 yil sentyabr boshidagi Markaziy bank kursi boʻlib, hisobot sanasidagi kursdan farq qilishi mumkin. Shu sababli dollar qiymati taxminiy va taqqoslash uchun keltirilgan)."
+    },
+    {
+      "type": "p",
+      "text": "2026 yil 1 avgust holatiga koʻra, Oʻzbekiston banklari jismoniy shaxslarga ajratgan kreditlar qoldigʻi 239 trillion 801 milliard soʻmga, yaʼni taxminan $20,3 milliardga yetdi. Yil boshidan buyon aholi qarzi 8,9 foizga — 19 trillion 518 milliard soʻmga (taxminan $1,65 milliard) oshgan, deyiladi Markaziy bank maʼlumotlarida."
+    },
+    {
+      "type": "graphic",
+      "kind": "figures",
+      "items": [
+        {
+          "value": "239 trln 801 mlrd soʻm",
+          "label": "jismoniy shaxslarga kreditlar qoldigʻi, 2026-yil 1-avgust"
+        },
+        {
+          "value": "$20,3 mlrd",
+          "label": "taxminan; 1 dollar = 11 800 soʻm"
+        },
+        {
+          "value": "+8,9%",
+          "label": "yil boshidan buyon"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Bu raqamning oʻzi unchalik ajablanarli emas – Oʻzbekistonda aholining kredit olishi soʻnggi yillarda muntazam oshib bormoqda. Qiziqarlisi, aholi qarzi banklarning umumiy kreditlaridan ham tezroq oʻsmoqda. Ayniqsa, kundalik xarajatlarni qoplash uchun olinadigan kreditlar tez koʻpaymoqda."
+    },
+    {
+      "type": "h2",
+      "text": "Aholining qarz olish surʼati bank kreditlarining umumiy oʻsishidan oʻzib ketdi"
+    },
+    {
+      "type": "p",
+      "text": "Oʻzbekiston banklarining umumiy kredit portfeli — yaʼni nafaqat aholiga, balki biznesga, davlat sektoriga va boshqa qarz oluvchilarga berilgan kreditlar — shu davr ichida 604 trillion 2 milliard soʻmdan 644 trillion 637 milliard soʻmgacha ($51,2 milliarddan $54,6 milliardgacha) oshdi, yaʼni 6,7 foizga. Jismoniy shaxslar qarzi esa 8,9 foizga oshdi."
+    },
+    {
+      "type": "p",
+      "text": "Natijada aholining banklar umumiy kredit portfelidagi ulushi yil boshidagi 36,5 foizdan avgustga kelib 37,2 foizga koʻtarildi."
+    },
+    {
+      "type": "graphic",
+      "kind": "bars",
+      "title": "Yil boshidan buyon oʻsish",
+      "items": [
+        {
+          "label": "Jismoniy shaxslar qarzi",
+          "value": "8,9%",
+          "v": 8.9,
+          "accent": true
+        },
+        {
+          "label": "Banklarning umumiy kredit portfeli",
+          "value": "6,7%",
+          "v": 6.7
+        }
+      ]
+    },
+    {
+      "type": "graphic",
+      "kind": "change",
+      "title": "Aholining banklar umumiy kredit portfelidagi ulushi",
+      "from": {
+        "when": "yil boshi",
+        "value": "36,5%"
+      },
+      "to": {
+        "when": "avgust",
+        "value": "37,2%"
+      }
+    },
+    {
+      "type": "p",
+      "text": "Farq uncha katta emas, lekin yoʻnalish barqaror: banklar korporativ sektorga nisbatan jismoniy shaxslarga kredit berishni kengaytirmoqda."
+    },
+    {
+      "type": "h2",
+      "text": "Ipoteka — eng katta kredit segmenti va tez oʻsmoqda"
+    },
+    {
+      "type": "p",
+      "text": "Aholi qarzining uchdan bir qismidan koʻprogʻi – 88 trillion 147 milliard soʻm ($7,47 milliard) ipoteka kreditlari hissasiga toʻgʻri keladi. Bu jami kreditlarning 36,8 foizini tashkil etadi. Yil boshidan beri ipoteka kreditlari 11 foizga yoki 8 trillion 751 milliard ($742 million) soʻmga oshgan."
+    },
+    {
+      "type": "graphic",
+      "kind": "composition",
+      "title": "Aholi qarzi turlari boʻyicha, 2026-yil 1-avgust",
+      "total": {
+        "label": "Jami",
+        "value": "239 trln 801 mlrd soʻm"
+      },
+      "items": [
+        {
+          "label": "Ipoteka",
+          "value": "88 trln 147 mlrd",
+          "v": 88147,
+          "accent": true
+        },
+        {
+          "label": "Mikroqarzlar",
+          "value": "51 trln 141 mlrd",
+          "v": 51141
+        },
+        {
+          "label": "Mikrokreditlar",
+          "value": "46 trln 744 mlrd",
+          "v": 46744
+        },
+        {
+          "label": "Avtokreditlar",
+          "value": "40 trln 503 mlrd",
+          "v": 40503
+        },
+        {
+          "label": "Taʼlim kreditlari",
+          "value": "6 trln 844 mlrd",
+          "v": 6844
+        },
+        {
+          "label": "Kredit kartalari va overdraftlar",
+          "value": "5 trln 914 mlrd",
+          "v": 5914
+        },
+        {
+          "label": "Isteʼmol kreditlari",
+          "value": "508 mlrd",
+          "v": 508
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Ipoteka kreditlarining tez oʻsishi asosan, davlat uy-joy dasturlari va subsidiyalangan foiz stavkalari bilan bogʻliq — bular iqtisodiyotning boshqa sohalarida qarz olish qimmat boʻlsa-da, ipotekani nisbatan arzon vositaga aylantiradi. Hozirda ipoteka eng koʻp qarz olinayotgan va tez oʻsayotgan kredit turlaridan biridir."
+    },
+    {
+      "type": "h2",
+      "text": "Mikroqarz va mikrokreditlar ham tez oʻsmoqda"
+    },
+    {
+      "type": "p",
+      "text": "Mikroqarzlar hajmi boʻyicha ikkinchi oʻrinda turadi. Ularning umumiy miqdori 51 trillion 141 milliard soʻmga ($4,33 milliard) yetgan va yil boshidan beri 4,7 foizga oshgan."
+    },
+    {
+      "type": "p",
+      "text": "Mikrokreditlar hajmi esa 40 trillion 474 milliard soʻmdan 46 trillion 744 milliard soʻmga yetib, 15,5 foizga oshgan. Bu kredit kartalaridan keyingi eng yuqori oʻsish surʼati hisoblanadi."
+    },
+    {
+      "type": "p",
+      "text": "Mikroqarz va mikrokreditlar — odatda oilalar kundalik ehtiyojlar uchun oladigan, qisqa muddatli, miqdori uncha katta boʻlmagan kreditlar."
+    },
+    {
+      "type": "p",
+      "text": "Aynan shu segmentda kuzatilayotgan oʻsish eʼtiborga molik. Bu nafaqat ularning qulayligini, balki aholining ayrim qismida kundalik xarajatlarni qoplash uchun mablagʻ yetishmayotganini ham koʻrsatishi mumkin."
+    },
+    {
+      "type": "h2",
+      "text": "Kredit kartalari va overdraftlar — banklarning jadal oʻsayotgan mahsuloti"
+    },
+    {
+      "type": "p",
+      "text": "Kredit kartalari va overdraftlar hajmi jihatidan eng kichik kredit turlaridan biri. 1-avgust holatiga ularning umumiy miqdori 5 trillion 914 milliard soʻm (taxminan $501 million)ni tashkil etgan. Ammo aynan shu turdagi kreditlar eng tez oʻsgan – yil boshidan beri 33,5 foizga yoki 1 trillion 484 milliard soʻmga oshgan."
+    },
+    {
+      "type": "p",
+      "text": "Bu koʻrsatkich mikrokreditlar oʻsishidan (+15,5 foiz) qariyb ikki barobar yuqori. Bu banklar kredit limitli kartalarni faol targʻib qilayotganini, aholi esa ulardan koʻproq foydalanayotganini koʻrsatadi. Kredit kartasidagi qarzdan foydalanib, uni qayta toʻlash va yana qarz olish mumkin. Undan notoʻgʻri foydalanilsa, qarz tez koʻpayib ketishi ham hech gapmas."
+    },
+    {
+      "type": "graphic",
+      "kind": "growth",
+      "title": "Yil boshidan oʻzgarish, kredit turlari boʻyicha",
+      "items": [
+        {
+          "label": "Kredit kartalari va overdraftlar",
+          "value": "+33,5%",
+          "v": 33.5,
+          "accent": true
+        },
+        {
+          "label": "Mikrokreditlar",
+          "value": "+15,5%",
+          "v": 15.5
+        },
+        {
+          "label": "Ipoteka",
+          "value": "+11%",
+          "v": 11
+        },
+        {
+          "label": "Mikroqarzlar",
+          "value": "+4,7%",
+          "v": 4.7
+        },
+        {
+          "label": "Isteʼmol kreditlari",
+          "value": "+3,3%",
+          "v": 3.3
+        },
+        {
+          "label": "Avtokreditlar",
+          "value": "+2%",
+          "v": 2
+        },
+        {
+          "label": "Taʼlim kreditlari",
+          "value": "−1,3%",
+          "v": -1.3
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Avtokredit va taʼlim kreditida oʻzgarishlar katta emas"
+    },
+    {
+      "type": "p",
+      "text": "Avtokreditlar yil boshidan beri 2 foizga oshib, 40 trillion 503 milliard soʻmga ($3,43 milliard) yetdi."
+    },
+    {
+      "type": "p",
+      "text": "Taʼlim kreditlari esa 1,3 foizga kamayib, 6 trillion 844 milliard soʻmni ($0,58 milliard) tashkil etdi."
+    },
+    {
+      "type": "p",
+      "text": "Isteʼmol kreditlari 3,3 foizga oshib, 508 milliard soʻmga ($43 million) yetgan."
+    },
+    {
+      "type": "h2",
+      "text": "Umumiy manzara nimani anglatadi?"
+    },
+    {
+      "type": "p",
+      "text": "Umuman olganda, aholining banklardan olgan qarzi butun iqtisodiyotni kreditlashga qaraganda tezroq oshmoqda. Ayniqsa, mikrokredit va kredit kartalaridagi qarzlar tez koʻpaymoqda."
+    },
+    {
+      "type": "p",
+      "text": "Ipoteka esa davlat yordami bilan aholining eng katta kredit turi boʻlib qolmoqda. Ammo qisqa muddatli va garovsiz kreditlarning tez oʻsishi ayrim aholining kundalik xarajatlarini qoplashda qiynalayotganidan darak berishi mumkin."
+    },
+    {
+      "type": "p",
+      "text": "Agar Oʻzbekiston aholisi taxminan 39 million kishi deb olinsa, $20,3 milliardlik kredit qarzi har bir kishiga oʻrtacha $521 dan toʻgʻri keladi. Yil boshida bu koʻrsatkich $479 atrofida edi."
+    },
+    {
+      "type": "graphic",
+      "kind": "change",
+      "title": "Kredit qarzi — har bir kishiga oʻrtacha",
+      "from": {
+        "when": "yil boshi",
+        "value": "$479"
+      },
+      "to": {
+        "when": "avgust",
+        "value": "$521"
+      },
+      "note": "aholi taxminan 39 million kishi deb olinganda"
+    },
+    {
+      "type": "p",
+      "text": "Albatta, bu faqat oʻrtacha hisob – aholining hammasi ham bankdan qarz olmagan. Ammo ushbu raqam aholining qarz yuklamasi oshib borayotganini koʻrsatadi."
+    },
+    {
+      "type": "p",
+      "text": "Markaziy bank hozircha ushbu davr va kredit segmentlari boʻyicha muddati oʻtgan qarzdorlik ulushi haqida maʼlumot eʼlon qilmagan. Bu koʻrsatkich kreditlash oʻsishining qanchalik barqaror ekanini baholash uchun muhim."
+    }
+  ]
+}

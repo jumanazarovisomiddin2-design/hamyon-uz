@@ -24,19 +24,16 @@ Why these were chosen: see [`docs/DECISIONS.md`](docs/DECISIONS.md).
 
 ```
 hamyon-uz/
+├── content/originals/  ← your original article texts (the site is checked against them)
+├── public/media/       ← video posters, short silent previews, article covers
+├── scripts/            ← the content check and the one-time importer
 ├── src/
-│   ├── app/            ← pages of the site (each folder = a web address)
-│   │   ├── layout.tsx  ← the frame shared by every page (language, title, SEO)
-│   │   ├── page.tsx    ← the homepage (currently a "coming soon" placeholder)
-│   │   ├── not-found.tsx ← the "page not found" page
-│   │   ├── robots.ts   ← tells Google what it may index (blocked until launch)
-│   │   └── globals.css ← brand colours, fonts, spacing (design tokens)
-│   └── lib/
-│       └── site.ts     ← site name, description, section names and addresses
-├── public/             ← images and files served as-is (logo, icons — later)
-├── docs/               ← project decisions, structure plan and roadmap
-├── .env.example        ← template for private settings
-└── package.json        ← list of tools the project uses + shortcut commands
+│   ├── app/            ← pages (each folder = a web address)
+│   ├── components/     ← reusable design pieces (header, infographics, cards…)
+│   ├── content/        ← articles, videos and video scripts
+│   └── lib/site.ts     ← site name, the two sections, links
+├── docs/               ← decisions, structure and roadmap
+└── package.json        ← tools the project uses + shortcut commands
 ```
 
 ## Running the site on your Mac (optional, one-time setup)
@@ -59,12 +56,13 @@ You don't need this to keep working with Claude, but it lets you see the site on
 
 ## Shortcut commands
 
-| Command          | What it does                                                     |
-| ---------------- | ---------------------------------------------------------------- |
-| `npm run dev`    | Runs the site on your computer, updating live as files change.   |
-| `npm run build`  | Builds the final, optimised version (what goes on the internet). |
-| `npm run check`  | Checks the code for mistakes and formatting problems.            |
-| `npm run format` | Tidies the formatting of all files.                              |
+| Command                 | What it does                                                      |
+| ----------------------- | ----------------------------------------------------------------- |
+| `npm run dev`           | Runs the site on your computer, updating live as files change.    |
+| `npm run build`         | Builds the final, optimised version (what goes on the internet).  |
+| `npm run check`         | Checks the content, the code and the formatting.                  |
+| `npm run check:content` | Confirms every article still matches its original, word for word. |
+| `npm run format`        | Tidies the formatting of all files.                               |
 
 ## Project documents
 

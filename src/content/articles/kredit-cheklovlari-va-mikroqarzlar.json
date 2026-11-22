@@ -1,0 +1,92 @@
+{
+  "slug": "kredit-cheklovlari-va-mikroqarzlar",
+  "title": "Kredit cheklovlaridan keyin qarz yuki pasaydi, ammo mikroqarzlar xavfi saqlanib qoldi",
+  "titleAccent": "mikroqarzlar xavfi",
+  "format": "yangilik",
+  "order": 5,
+  "author": "Tahririyat",
+  "publishedAt": null,
+  "series": null,
+  "excerpt": "Raqamlar umumiy qarz yuki pasayganini koʻrsatadi, biroq cheklovlar bunga aynan qancha hissa qoʻshganini mavjud maʼlumotlar bilan ajratib boʻlmaydi.",
+  "cover": {
+    "kind": "graphic",
+    "variant": "change",
+    "a": "36%",
+    "b": "33%",
+    "meta": "Umumiy DSTI koʻrsatkichi"
+  },
+  "photo": null,
+  "body": [
+    {
+      "type": "p",
+      "text": "Markaziy bankning 2025-yil birinchi yarim yilligi uchun moliyaviy barqarorlik sharhida: «Jismoniy shaxslarning qarz yuki darajasi pasayishiga 2025-yildan eʼtiboran barcha kredit turlari uchun qarz yuki cheklovining 50 foizgacha qatʼiylashtirilishi taʼsir koʻrsatdi», deyiladi. Hisobot 2025-yilning birinchi yarim yilligidagi kreditlash holatini tahlil qiladi."
+    },
+    {
+      "type": "p",
+      "text": "Markaziy bankning 2025-yilgi moliyaviy barqarorlik sharhi va makroprudensial talablar haqidagi rasmiy maʼlumotlari solishtirildi. 2025-yil birinchi yarim yilligida qarz oluvchilarning bank va bankdan tashqari majburiyatlarini hisobga oluvchi umumiy DSTI koʻrsatkichi 2024-yil ikkinchi yarim yilligiga nisbatan 36 foizdan 33 foizgacha pasaygan. DSTI 50 foizdan oshmagan qarz oluvchilarga ajratilgan kreditlar ulushi esa 2024-yilning mos davriga nisbatan 18 foiz bandga oshib, 78 foizni tashkil etgan."
+    },
+    {
+      "type": "graphic",
+      "kind": "change",
+      "title": "Umumiy DSTI koʻrsatkichi",
+      "from": {
+        "when": "2024-yil II yarim yillik",
+        "value": "36%"
+      },
+      "to": {
+        "when": "2025-yil I yarim yillik",
+        "value": "33%"
+      },
+      "note": "qarz toʻlovlarining daromadga nisbati"
+    },
+    {
+      "type": "graphic",
+      "kind": "figures",
+      "items": [
+        {
+          "value": "78%",
+          "label": "DSTI 50 foizdan oshmagan qarz oluvchilarga ajratilgan kreditlar ulushi"
+        },
+        {
+          "value": "+18",
+          "label": "foiz band — 2024-yilning mos davriga nisbatan"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Biroq 2025-yil yakunlari boʻyicha eʼlon qilingan sharhda mikroqarz oluvchilarning oʻrtacha DSTI koʻrsatkichi 40 foizga yetgani va ular soni qariyb 2,7 million kishini tashkil etgani qayd etilgan."
+    },
+    {
+      "type": "graphic",
+      "kind": "figures",
+      "title": "Mikroqarz oluvchilar, 2025-yil yakunlari",
+      "items": [
+        {
+          "value": "40%",
+          "label": "oʻrtacha DSTI koʻrsatkichi"
+        },
+        {
+          "value": "2,7 mln",
+          "label": "kishi — qariyb"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Raqamlar umumiy qarz yuki pasayganini koʻrsatadi, biroq cheklovlar bunga aynan qancha hissa qoʻshganini mavjud maʼlumotlar bilan ajratib boʻlmaydi. Mikroqarzlar segmentidagi yuqori qarz yuki esa xavf saqlanayotganini koʻrsatadi."
+    },
+    {
+      "type": "note",
+      "text": "Sunʼiy intellekt yordamida Markaziy bank hisobotlaridagi koʻrsatkichlar taqqoslandi"
+    }
+  ],
+  "sources": {
+    "heading": "Manbalar:",
+    "items": [
+      "Markaziy bank — 2025-yil I yarim yilligi moliyaviy barqarorlik sharhi.",
+      "Markaziy bank — 2025-yil uchun moliyaviy barqarorlik sharhi.",
+      "Markaziy bank — qarzning daromadga nisbati talabi."
+    ]
+  }
+}

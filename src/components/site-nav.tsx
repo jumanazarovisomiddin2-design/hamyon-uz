@@ -2,21 +2,20 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { aboutLink, sections } from "@/lib/site";
+import { sections } from "@/lib/site";
 
 export function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-/** Desktop navigation. The current section gets a terracotta underline. */
+/** The two sections. The current one gets an underline. */
 export function SiteNav({ tone = "light" }: { tone?: "light" | "dark" }) {
   const pathname = usePathname();
-  const quiet = tone === "dark" ? "text-stone" : "text-ink-muted";
   const accent = tone === "dark" ? "decoration-sand" : "decoration-terracotta";
 
   return (
-    <nav aria-label="Asosiy boʻlimlar" className="hidden lg:block">
-      <ul className="text-ui flex items-center gap-x-8 font-sans font-medium xl:gap-x-9">
+    <nav aria-label="Asosiy boʻlimlar">
+      <ul className="lg:text-ui m-0 flex list-none items-center gap-x-5 p-0 font-sans text-[0.9375rem] font-medium sm:gap-x-8">
         {sections.map((s) => {
           const active = isActive(pathname, s.href);
           return (
@@ -24,7 +23,7 @@ export function SiteNav({ tone = "light" }: { tone?: "light" | "dark" }) {
               <Link
                 href={s.href}
                 aria-current={active ? "page" : undefined}
-                className={`py-3 underline-offset-[7px] ${
+                className={`inline-block py-3 underline-offset-[7px] ${
                   active ? `underline decoration-2 ${accent}` : "no-underline hover:underline"
                 }`}
               >
@@ -33,15 +32,6 @@ export function SiteNav({ tone = "light" }: { tone?: "light" | "dark" }) {
             </li>
           );
         })}
-        <li>
-          <Link
-            href={aboutLink.href}
-            aria-current={isActive(pathname, aboutLink.href) ? "page" : undefined}
-            className={`py-3 no-underline hover:underline ${quiet}`}
-          >
-            {aboutLink.label}
-          </Link>
-        </li>
       </ul>
     </nav>
   );

@@ -1,86 +1,81 @@
 import Link from "next/link";
-import type { Video } from "@/content";
-import { Headline } from "./story-parts";
-import { PlayGlyph, YouTubePlayer } from "./youtube-player";
+import { videoHref, type Video } from "@/content";
+import { Headline, ShipLabel } from "./editorial";
+import { VideoPoster } from "./video-poster";
+import { YouTubePlayer } from "./youtube-player";
 
-export function videoHref(v: Pick<Video, "slug">) {
-  return `/videolar/${v.slug}`;
-}
-
-/** Duration, or "Tez orada" while the video is not published. */
-export function VideoBadge({ video }: { video: Video }) {
-  return video.status === "chiqdi" && video.duration ? (
-    <span className="figure bg-charcoal text-paper px-2 py-0.5 text-[0.78rem]">
-      {video.duration}
-    </span>
-  ) : (
-    <span className="bg-sand text-charcoal px-2 py-1 font-sans text-[0.6875rem] font-semibold tracking-[0.1em] uppercase">
-      Tez orada
+/** Status shown until a video is on YouTube. */
+export function ComingSoon({ className = "" }: { className?: string }) {
+  return (
+    <span
+      className={`bg-paper text-charcoal inline-flex items-center gap-2 px-2.5 py-1 font-sans text-[0.7rem] font-semibold tracking-[0.1em] uppercase ${className}`}
+    >
+      <span aria-hidden="true" className="bg-terracotta h-1.5 w-1.5 rounded-full" />
+      YouTubeʼda tez orada
     </span>
   );
 }
 
-/**
- * The video picture. Plays from YouTube once published; until then a clearly
- * marked frame with the shot brief.
- */
-export function VideoFrame({
-  video,
-  ratio = "aspect-video",
-  size = "card",
-  playable = false,
-  bleed = false,
-}: {
-  video: Video;
-  ratio?: string;
-  size?: "hero" | "card";
-  playable?: boolean;
-  /** Full screen width: labels line up with the page margin. */
-  bleed?: boolean;
-}) {
-  const inset = bleed ? "left-gutter" : "left-3 md:left-5";
-  const insetRight = bleed ? "right-gutter" : "right-3 md:right-5";
-  const hero = size === "hero";
-  const live = video.status === "chiqdi" && video.youtubeId;
-
+export function VideoLabel({ video }: { video: Video }) {
   return (
-    <div className={`bg-film text-paper relative overflow-hidden ${ratio}`}>
-      {live && playable ? (
-        <YouTubePlayer id={video.youtubeId!} title={video.title} />
+    <ShipLabel
+      tone="dark"
+      cells={[
+        { k: "Format", v: video.format },
+        { k: "Davomiyligi", v: video.duration, mono: true },
+      ]}
+    />
+  );
+}
+
+/** The video itself on its page: YouTube when available, otherwise the poster + status. */
+export function VideoStage({ video }: { video: Video }) {
+  return (
+    <div className="bg-film relative aspect-video w-full overflow-hidden">
+      {video.youtubeId ? (
+        <YouTubePlayer id={video.youtubeId} title={video.title} poster={video.poster} />
       ) : (
         <>
-          <span
-            className={`figure absolute top-3 ${inset} max-w-[34rem] pr-3 text-[0.65rem] leading-relaxed tracking-[0.1em] opacity-85 md:top-5`}
-          >
-            {hero ? `KADR KERAK · ${video.frame.brief.replace(/^Kadr:\s*/, "")}` : "KADR KERAK"}
-          </span>
-          <span className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-            <span
-              className={`border-paper flex items-center justify-center rounded-full border-[1.5px] ${
-                hero ? "h-20 w-20 md:h-28 md:w-28" : "h-14 w-14"
-              } ${live ? "" : "opacity-60"}`}
-            >
-              <PlayGlyph size={hero ? 28 : 18} />
-            </span>
-          </span>
-          <span className={`absolute bottom-3 md:bottom-5 ${insetRight}`}>
-            <VideoBadge video={video} />
-          </span>
+          <VideoPoster video={video} priority sizes="(min-width: 1440px) 1280px, 100vw" />
+          <div className="absolute top-3 left-3 md:top-5 md:left-5">
+            <ComingSoon />
+          </div>
         </>
       )}
     </div>
   );
 }
 
-/** Large 16:9 card used in rows on dark sections. */
-export function VideoCard({ video }: { video: Video }) {
+/** Card used on the homepage and in MULTIMEDIA. */
+export function VideoCard({ video, large = false }: { video: Video; large?: boolean }) {
   return (
-    <Link href={videoHref(video)} className="group flex flex-col gap-4 no-underline">
-      <VideoFrame video={video} />
-      <span className="label text-stone">{video.format}</span>
-      <span className="text-h4 group-hover:underline">
-        <Headline title={video.title} accent={video.accent} accentColor="text-sand" />
-      </span>
-    </Link>
+    <article className="group flex flex-col gap-4">
+      <Link
+        href={videoHref(video)}
+        className="relative block aspect-video overflow-hidden"
+        tabIndex={-1}
+        aria-hidden="true"
+      >
+        <VideoPoster
+          video={video}
+          sizes={large ? "(min-width: 1024px) 60vw, 100vw" : "(min-width: 1024px) 35vw, 100vw"}
+        />
+        <span className="absolute top-3 left-3">
+          <ComingSoon />
+        </span>
+        <span className="figure bg-charcoal/85 text-paper absolute right-3 bottom-3 px-2 py-0.5 text-[0.75rem]">
+          {video.duration}
+        </span>
+      </Link>
+      <VideoLabel video={video} />
+      <h3 className={`m-0 font-serif ${large ? "text-h2" : "text-h3"}`}>
+        <Link href={videoHref(video)} className="link-quiet">
+          <Headline title={video.title} accent={video.titleAccent} accentColor="text-sand" />
+        </Link>
+      </h3>
+      <p className="text-stone m-0 max-w-[34rem] font-serif text-[1.0625rem] leading-relaxed italic">
+        «{video.dek}»
+      </p>
+    </article>
   );
 }

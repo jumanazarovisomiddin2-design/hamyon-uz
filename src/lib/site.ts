@@ -9,7 +9,7 @@ export const site = {
   shortName: "Hamyon",
   tagline: "Pul va kundalik hayot haqida mustaqil nashr",
   description:
-    "HAMYON.UZ — nasiya, kredit, qarz, jamgʻarma va isteʼmol madaniyati haqida maqolalar, videolar, tahlillar va amaliy qoʻllanmalar.",
+    "HAMYON.UZ — nasiya, kredit, qarz va kundalik pul haqida mustaqil maqolalar va videolar.",
   locale: "uz_UZ",
   lang: "uz",
 
@@ -24,33 +24,24 @@ export const site = {
 } as const;
 
 /**
- * Boʻlimlar — the main sections and their web addresses.
- * Addresses are fixed so links never have to change after launch.
+ * Boʻlimlar — the two sections of the site. Addresses are fixed.
+ * Formats (Tahlil, Tushuntirish …) are filters inside MAQOLALAR.
  */
 export const sections = [
-  { key: "articles", label: "Maqolalar", href: "/maqolalar" },
-  { key: "videos", label: "Videolar", href: "/videolar" },
-  { key: "analysis", label: "Tahlil", href: "/tahlil" },
-  { key: "guides", label: "Qoʻllanmalar", href: "/qollanmalar" },
+  { key: "maqolalar", label: "Maqolalar", href: "/maqolalar" },
+  { key: "multimedia", label: "Multimedia", href: "/multimedia" },
 ] as const;
 
 export type SectionKey = (typeof sections)[number]["key"];
 
-/** Shown after the sections in the menu, in a quieter colour. */
-export const aboutLink = { label: "Biz haqimizda", href: "/biz-haqimizda" } as const;
+/** Newsletter block on the homepage (sign-up opens later). */
+export const newsletterAnchor = "haftalik-xat";
 
-/** Newsletter sign-up lives on the homepage (built in stage 3). */
-export const newsletterLink = { label: "Haftalik xat", href: "/#haftalik-xat" } as const;
-
-/** Search page (planned). */
-export const searchHref = "/qidiruv";
-
-/** Footer links. */
-export const footerLinks = [
-  { label: "Tahririyat tamoyillari", href: "/biz-haqimizda#tamoyillar" },
-  { label: "Biz haqimizda", href: "/biz-haqimizda" },
-  { label: "Aloqa", href: "/biz-haqimizda#aloqa" },
-] as const;
+/**
+ * Footer links. "Biz haqimizda" and "Tahririyat tamoyillari" are added
+ * when those pages are written.
+ */
+export const footerLinks = sections;
 
 /**
  * Social media. Add the real address when an account exists —

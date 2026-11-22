@@ -34,7 +34,16 @@ export const viewport: Viewport = {
 /** The page frame shared by every page. Header and footer live in the group layouts. */
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang={site.lang} className="h-full">
+    <html lang={site.lang} className="h-full" suppressHydrationWarning>
+      <head>
+        {/* Turns on the scroll-in motion (globals.css). Without it, everything is simply shown. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')",
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col">
         <a
           href="#asosiy"
