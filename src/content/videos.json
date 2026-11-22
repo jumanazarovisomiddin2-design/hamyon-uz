@@ -1,38 +1,22 @@
 [
   {
-    "slug": "nasiya-qulaylikmi-yoki-qimmat-qarz",
-    "title": "Nasiya: qulaylikmi yoki qimmat qarz?",
-    "titleAccent": "qimmat qarz",
-    "format": "Video",
-    "order": 2,
-    "duration": "7:47",
-    "durationIso": "PT7M47S",
-    "dek": "Lekin bitta savol bor: siz mahsulot uchun aslida qancha pul toʻlaysiz?",
-    "poster": "/media/multimedia/nasiya-qulaylikmi-yoki-qimmat-qarz.jpg",
-    "preview": "/media/multimedia/nasiya-qulaylikmi-yoki-qimmat-qarz-preview.mp4",
-    "posterAlt": "Videodan kadr: «oyiga 325 000 soʻm» yozuvi chizilgan, ostida «Jami: 3 900 000 soʻm»",
-    "youtubeId": null,
-    "series": "nasiya-sovga-emas",
-    "related": "foizsiz-nasiya-yashirin-kredit",
-    "script": "nasiya-qulaylikmi-yoki-qimmat-qarz",
-    "author": "Tahririyat"
-  },
-  {
     "slug": "nasiya-tarixi",
     "title": "Nasiya tarixi",
-    "titleAccent": "tarixi",
-    "format": "Video",
     "order": 1,
     "duration": "7:31",
     "durationIso": "PT7M31S",
-    "dek": "Lekin bir savol bor: mahsulotni bugun olib, pulini keyin toʻlash qachon boshlandi?",
-    "poster": "/media/multimedia/nasiya-tarixi.jpg",
-    "preview": "/media/multimedia/nasiya-tarixi-preview.mp4",
-    "posterAlt": "Videodan rasmli kadr: tuya karvoni va savdogarlar, xaritada «Samarqand → Buxoro» yoʻli",
-    "youtubeId": null,
-    "series": "nasiya-sovga-emas",
-    "related": "nasiyaning-tort-ming-yillik-yoli",
-    "script": "nasiya-tarixi",
-    "author": "Tahririyat"
+    "src": "/media/videolar/nasiya-tarixi.mp4",
+    "poster": "/media/videolar/nasiya-tarixi.jpg",
+    "posterAlt": "Videodan rasmli kadr: tuya karvoni va savdogarlar, xaritada «Samarqand → Buxoro» yoʻli"
+  },
+  {
+    "slug": "nasiya-qulaylikmi-yoki-qimmat-qarz",
+    "title": "Nasiya: qulaylikmi yoki qimmat qarz?",
+    "order": 2,
+    "duration": "7:47",
+    "durationIso": "PT7M47S",
+    "src": "/media/videolar/nasiya-qulaylikmi-yoki-qimmat-qarz.mp4",
+    "poster": "/media/videolar/nasiya-qulaylikmi-yoki-qimmat-qarz.jpg",
+    "posterAlt": "Videodan kadr: «oyiga 325 000 soʻm» yozuvi chizilgan, ostida «Jami: 3 900 000 soʻm»"
   }
 ]

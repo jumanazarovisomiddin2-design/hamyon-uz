@@ -35,15 +35,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`h-full ${serif.variable} ${sans.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        {/* Turns on the scroll-in motion (globals.css). Without it, everything is simply shown. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')",
-          }}
-        />
-      </head>
       <body className="flex min-h-full flex-col">
         <a
           href="#asosiy"

@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     return { rules: { userAgent: "*", disallow: "/" } };
   }
   return {
-    rules: { userAgent: "*", allow: "/", disallow: ["/studio", "/dizayn-tizimi"] },
+    rules: { userAgent: "*", allow: "/", disallow: ["/studio"] },
     sitemap: `${site.url}/sitemap.xml`,
   };
 }

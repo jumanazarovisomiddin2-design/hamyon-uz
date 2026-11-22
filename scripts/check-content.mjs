@@ -7,12 +7,13 @@
  *      (content/originals/*.txt) sentence for sentence — nothing changed,
  *      added or removed. Only typography may differ (oʻ gʻ ʼ « », spaces,
  *      bold/italic marks).
- *   2. Every number shown in an infographic appears in that article's text.
- *   3. Homepage excerpts are exact quotes from the article.
+ *   2. Every number shown in an infographic (if any) appears in that article.
+ *   3. Page descriptions are exact quotes from the article.
+ *   4. Every article image and video file exists.
  *
  * If anything fails, the build stops and the problem is printed.
  */
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname;
@@ -137,25 +138,15 @@ for (const file of files) {
   }
 }
 
-// ── video scripts ──
-const scriptDir = "src/content/scripts";
-for (const file of readdirSync(join(root, scriptDir)).filter((f) => f.endsWith(".json"))) {
-  const s = JSON.parse(read(join(scriptDir, file)));
-  const original = read(`content/originals/video-${s.slug}.txt`).split("\n");
-  compare(
-    `ssenariy ${s.slug}`,
-    s.body.map((b) => b.text),
-    original,
-  );
+// ── every article has its picture, every video its file and poster ──
+for (const file of files) {
+  const a = JSON.parse(read(join(articleDir, file)));
+  if (!existsSync(join(root, "public", a.cover.src)))
+    fail(`maqola ${a.slug}`, `image missing: ${a.cover.src}`);
 }
-
-// ── video descriptions must be quotes from their script ──
-const videos = JSON.parse(read("src/content/videos.json"));
-for (const v of videos) {
-  const script = JSON.parse(read(join(scriptDir, `${v.script}.json`)));
-  const text = normalize(script.body.map((b) => b.text).join(" "));
-  if (!text.includes(normalize(v.dek)))
-    fail(`video ${v.slug}`, "description is not an exact quote from the script");
+for (const v of JSON.parse(read("src/content/videos.json"))) {
+  for (const f of [v.src, v.poster])
+    if (!existsSync(join(root, "public", f))) fail(`video ${v.slug}`, `file missing: ${f}`);
 }
 
 if (errors.length) {
@@ -163,5 +154,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `✓ Content check passed: ${files.length} articles, scripts and infographics match the originals.`,
+  `✓ Content check passed: ${files.length} articles match the originals word for word; all images and videos are in place.`,
 );

@@ -144,3 +144,18 @@ and rhythm. Design canvas: https://claude.ai/artifact/4oPhCSTSR2svKs4CLDLK4V
 - Browser testing: automated in Chromium only (Firefox/WebKit downloads are blocked in the build
   environment). Code reviewed for Safari 16.4+/Firefox 128+ (Tailwind 4's baseline); the
   scroll-linked progress bar is feature-guarded.
+
+## Simple version (2026-11-22, owner's final instruction)
+
+The owner found the full Concept v2 site too complex and asked for: 3 articles (homepage shows only
+picture + title), the videos with titles, the full videos playing on the site, and the authors
+Isomiddin Jumanazarov and Shohzodaxon Muzaffarova — nothing else.
+
+- Homepage = 3 Nasiya articles + 2 videos. Article and video pages only. All other sections,
+  filters, infographics, motion, series tracker, newsletter and the style guide were removed (they
+  remain in git history; the two news articles and scripts are kept in `content/archive/`).
+- Only two finished videos exist (1.mp4, 2.mp4). The raw interviews were not used (earlier
+  instruction; the hero is anonymous in the article). A third video can be added in `videos.json`.
+- Videos are self-hosted, re-encoded to 720p H.264/AAC (full length, with sound), never autoplay.
+- Article pictures: real frames from the authors' own "Nasiya tarixi" video (no faces, no text).
+- Article texts remain word for word; the content check still runs before every build.

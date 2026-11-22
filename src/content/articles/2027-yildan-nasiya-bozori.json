@@ -1,21 +1,16 @@
 {
   "slug": "2027-yildan-nasiya-bozori",
   "title": "2027-yildan nasiya bozori qanday oʻzgaradi?",
-  "titleAccent": "qanday oʻzgaradi",
-  "format": "tushuntirish",
   "order": 3,
-  "author": "Tahririyat",
-  "publishedAt": null,
-  "series": "nasiya-sovga-emas",
   "excerpt": "2027-yil 1-yanvardan bunday manzara oʻzgaradi. Prezidentning 2026-yil 14-avgustdagi PQ-294-son qaroriga koʻra, nasiya bozori ilk bor alohida qoidalar bilan tartibga solinmoqda.",
   "cover": {
-    "kind": "graphic",
-    "variant": "limits",
-    "a": "12 oy",
-    "b": "50%",
-    "meta": "PQ-294-son qaror · 2027-yil 1-yanvardan"
+    "kind": "image",
+    "src": "/media/maqolalar/2027-nasiya-kadr.jpg",
+    "alt": "Kalkulyator, hujjatlar va pul",
+    "credit": "Kadr: «Nasiya tarixi» videosidan",
+    "width": 1600,
+    "height": 900
   },
-  "photo": null,
   "body": [
     {
       "type": "p",
@@ -26,44 +21,8 @@
       "text": "Endi oddiy hisob qilamiz: 476 921 × 24 = 11 446 104 soʻm. Yaʼni televizor naqd narxidan 4,7 mln soʻm qimmatga tushadi. Bu 70% ustama."
     },
     {
-      "type": "graphic",
-      "kind": "price",
-      "title": "Hisense 55E8Q televizori, Texnomart",
-      "before": {
-        "label": "Naqd narx",
-        "value": "6 733 000 soʻm"
-      },
-      "after": {
-        "label": "24 oyda jami",
-        "value": "11 446 104 soʻm"
-      },
-      "meta": ["476 921 soʻm × 24 oy"],
-      "diff": {
-        "label": "Ustama",
-        "value": "70%"
-      }
-    },
-    {
       "type": "p",
       "text": "Shu toʻlov jadvalini bank krediti bilan solishtirsak, u yillik taxminan 75% samarali stavkaga teng. Taqqoslash uchun: 2026-yil noyabrida banklarning mikroqarzlari boʻyicha oʻrtacha stavka yillik 27,5% atrofida boʻlgan."
-    },
-    {
-      "type": "graphic",
-      "kind": "bars",
-      "title": "Yillik samarali stavka",
-      "items": [
-        {
-          "label": "Shu muddatli toʻlov jadvali",
-          "value": "taxminan 75%",
-          "v": 75,
-          "accent": true
-        },
-        {
-          "label": "Banklarning mikroqarzlari, 2026-yil noyabr",
-          "value": "27,5% atrofida",
-          "v": 27.5
-        }
-      ]
     },
     {
       "type": "p",
@@ -78,66 +37,12 @@
       "text": "Nasiya Oʻzbekistonda bir necha yil ichida ommaviy xarid usuliga aylandi. Markaziy bank maʼlumotiga koʻra, 2025-yil 1-yanvar holatida nasiya bilan bogʻliq kredit portfeli **8,5 trln soʻm**ni tashkil etgan. Uning atigi 7% i banklarga, 26% i ikkita mikromoliya tashkilotiga (MMT) toʻgʻri kelgan. Qolgan **67%** — qariyb 5,7 trln soʻm — bank ham, MMT ham boʻlmagan tadbirkorlik subyektlari: nasiya platformalari va doʻkonlar qoʻlida boʻlgan. Yaʼni bozorning uchdan ikki qismi Markaziy bank nazoratidan tashqarida ishlagan."
     },
     {
-      "type": "graphic",
-      "kind": "composition",
-      "title": "Nasiya bilan bogʻliq kredit portfeli, 2025-yil 1-yanvar",
-      "total": {
-        "label": "Jami",
-        "value": "8,5 trln soʻm"
-      },
-      "items": [
-        {
-          "label": "Banklar",
-          "value": "7%",
-          "v": 7
-        },
-        {
-          "label": "Ikkita mikromoliya tashkiloti",
-          "value": "26%",
-          "v": 26
-        },
-        {
-          "label": "Nasiya platformalari va doʻkonlar",
-          "value": "67% · qariyb 5,7 trln soʻm",
-          "v": 67,
-          "accent": true
-        }
-      ]
-    },
-    {
       "type": "p",
       "text": "Regulyatorning asosiy xavotiri — yashirin qarz. Nasiya shartnomalarining aksariyati kredit byurolarida aks etmagan. Bank mijozga kredit berayotganda uning nasiya qarzlarini koʻrmagan va shu sababli qarz yuki meʼyoridan ortiq kredit bergan. Markaziy bank raisi Timur Ishmetov 2025-yil iyunida aynan shu muammoni koʻrsatib, bozorni tartibga solish rejalashtirilganini aytgan edi."
     },
     {
       "type": "p",
       "text": "Dastlab Markaziy bank nasiya standartlarini ishlab chiqib, soha uyushmalariga topshirdi. Ular ixtiyoriy edi. 2026-yil yanvarida Markaziy bank raisi oʻrinbosari Sanjar Nosirov keyingi bosqichda alohida qaror va alohida qonun tayyorlanishini maʼlum qildi. Avgustda qaror imzolandi. Qonun esa hali tayyorlanmoqda."
-    },
-    {
-      "type": "graphic",
-      "kind": "timeline",
-      "title": "Tartibga solish qadamlari",
-      "items": [
-        {
-          "when": "2025-yil iyun",
-          "what": "Timur Ishmetov: bozorni tartibga solish rejalashtirilgan"
-        },
-        {
-          "when": "2026-yil yanvar",
-          "what": "Sanjar Nosirov: alohida qaror va alohida qonun tayyorlanadi"
-        },
-        {
-          "when": "2026-yil 14-avgust",
-          "what": "PQ-294-son qaror imzolandi"
-        },
-        {
-          "when": "2026-yil 1-dekabrgacha",
-          "what": "Markaziy bank va Soliq qoʻmitasi aniqlash tartibini ishlab chiqadi"
-        },
-        {
-          "when": "2027-yil 1-yanvar",
-          "what": "Operator faqat Markaziy bank reyestriga kirgandan keyin ishlaydi"
-        }
-      ]
     },
     {
       "type": "h2",
@@ -183,25 +88,6 @@
       "text": "Asosiy oʻzgarishlar"
     },
     {
-      "type": "graphic",
-      "kind": "figures",
-      "title": "Yangi chegaralar",
-      "items": [
-        {
-          "value": "12 oy",
-          "label": "operator orqali nasiyaning eng uzoq muddati"
-        },
-        {
-          "value": "250 BHM",
-          "label": "tovar narxi chegarasi — 110 mln soʻm"
-        },
-        {
-          "value": "50%",
-          "label": "ustama, jarima va penya — yillik umumiy chegara"
-        }
-      ]
-    },
-    {
       "type": "p",
       "text": "**1. Muddat — koʻpi bilan 12 oy.** Operator orqali tuziladigan nasiya shartnomasi boʻyicha xaridorning majburiyati shartnoma tuzilgan kundan boshlab 12 oydan oshmasligi kerak. 18, 24 yoki 36 oylik shartnoma endi nasiya emas, **isteʼmol krediti shartnomasi** deb hisoblanadi. Yaʼni u boshqa qoidalar asosida — kredit sifatida rasmiylashtiriladi."
     },
@@ -236,33 +122,6 @@
     {
       "type": "p",
       "text": "Lekin bir muhim farq bor: **jarima va penya ham shu 50% ichiga kiradi.** Agar ustama 40% boʻlsa, toʻlovni kechiktirgan xaridordan yana koʻpi bilan 10% undirish mumkin. Bugungidek qarz jarimalar hisobiga cheksiz oʻsib boradigan holatlar boʻlmaydi."
-    },
-    {
-      "type": "graphic",
-      "kind": "receipt",
-      "title": "50% chegarasi: oddiy misol",
-      "lines": [
-        {
-          "label": "Tovar narxi",
-          "value": "10 mln soʻm"
-        },
-        {
-          "label": "Muddat",
-          "value": "12 oy"
-        },
-        {
-          "label": "Ustama boʻlsa",
-          "value": "40%"
-        },
-        {
-          "label": "Kechiktirganda yana koʻpi bilan",
-          "value": "10%"
-        }
-      ],
-      "total": {
-        "label": "Qoʻshimcha toʻlov, koʻpi bilan",
-        "value": "5 mln soʻm"
-      }
     },
     {
       "type": "p",

@@ -1,23 +1,15 @@
 {
   "slug": "foizsiz-nasiya-yashirin-kredit",
   "title": "Nasiya foizsiz xaridmi yoki yashirin qimmat kredit?",
-  "titleAccent": "yashirin qimmat",
-  "format": "tahlil",
   "order": 2,
-  "author": "Tahririyat",
-  "publishedAt": null,
-  "series": "nasiya-sovga-emas",
   "excerpt": "Telefonning naqd narxi taxminan 7,5 mln soʻm edi. D. uni 24 oyga oldi va har oy 500 ming soʻm atrofida toʻlaydi.",
   "cover": {
-    "kind": "graphic",
-    "variant": "price",
-    "before": "taxminan 7,5 mln soʻm",
-    "after": "12 mln soʻm",
-    "meta": "24 oy · har oy 500 ming soʻm atrofida"
-  },
-  "photo": {
-    "shot": "keng plan",
-    "brief": "Elektronika doʻkoni vitrinasi, kechqurun: telefonlar ostida muddatli toʻlov yorliqlari."
+    "kind": "image",
+    "src": "/media/maqolalar/foizsiz-nasiya-kadr.jpg",
+    "alt": "Qoʻlda smartfon va bank kartasi",
+    "credit": "Kadr: «Nasiya tarixi» videosidan",
+    "width": 1600,
+    "height": 900
   },
   "body": [
     {
@@ -37,24 +29,6 @@
       "text": "Telefonning naqd narxi taxminan 7,5 mln soʻm edi. D. uni 24 oyga oldi va har oy 500 ming soʻm atrofida toʻlaydi. Ikki yil oxirida u jami 12 mln soʻm toʻlaydi – naqd narxdan 4,5 mln soʻm koʻp."
     },
     {
-      "type": "graphic",
-      "kind": "price",
-      "title": "Hikoyadagi telefon",
-      "before": {
-        "label": "Naqd narx",
-        "value": "taxminan 7,5 mln soʻm"
-      },
-      "after": {
-        "label": "Ikki yilda jami",
-        "value": "12 mln soʻm"
-      },
-      "meta": ["24 oy", "har oy 500 ming soʻm atrofida"],
-      "diff": {
-        "label": "Naqd narxdan koʻp",
-        "value": "4,5 mln soʻm"
-      }
-    },
-    {
       "type": "speech",
       "text": "«Biroz qimmat boʻlishini bilardim, lekin buncha qimmat boʻladi deb oʻylamagandim», – deydi. u."
     },
@@ -69,20 +43,6 @@
     {
       "type": "p",
       "text": "Oʻzbekistonda nasiya bir necha yil ichida kichik xizmatdan ommaviy toʻlov usuliga aylandi. Markaziy bankning «Haqiqatdan ham nasiya bozori foizsizmi?» nomli tahliliga koʻra, nasiya shartnomalari soni 2023-yil fevralidagi 13,5 mingtadan 2024-yil dekabrida 973 mingtaga yetgan – qariyb 72 barobar oʻsish. Oʻrtacha shartnoma summasi esa 1,2 mln soʻm atrofida. 2024-yilda bu xizmatdan 1,9 mln kishi foydalangan."
-    },
-    {
-      "type": "graphic",
-      "kind": "change",
-      "title": "Nasiya shartnomalari soni",
-      "from": {
-        "when": "2023-yil fevral",
-        "value": "13,5 ming"
-      },
-      "to": {
-        "when": "2024-yil dekabr",
-        "value": "973 ming"
-      },
-      "note": "qariyb 72 barobar oʻsish"
     },
     {
       "type": "p",
@@ -143,34 +103,6 @@
     {
       "type": "p",
       "text": "Qizigʻi, eng katta qarz yoshlarda emas. Bir kishiga toʻgʻri keladigan oʻrtacha nasiya qarzi 3,7 mln soʻm boʻlsa, 36–50 yoshlilarda bu koʻrsatkich 4,2 mln, 18–25 yoshlilarda esa 2,9 mln soʻm. Toshkent shahrida oʻrtacha qarz 5,5 mln soʻmga yetadi."
-    },
-    {
-      "type": "graphic",
-      "kind": "bars",
-      "title": "Bir kishiga toʻgʻri keladigan oʻrtacha nasiya qarzi",
-      "items": [
-        {
-          "label": "18–25 yoshlilar",
-          "value": "2,9 mln soʻm",
-          "v": 2.9
-        },
-        {
-          "label": "Oʻrtacha",
-          "value": "3,7 mln soʻm",
-          "v": 3.7
-        },
-        {
-          "label": "36–50 yoshlilar",
-          "value": "4,2 mln soʻm",
-          "v": 4.2
-        },
-        {
-          "label": "Toshkent shahri",
-          "value": "5,5 mln soʻm",
-          "v": 5.5,
-          "accent": true
-        }
-      ]
     },
     {
       "type": "p",
@@ -245,23 +177,6 @@
       ]
     },
     {
-      "type": "graphic",
-      "kind": "schedule",
-      "title": "Naqd narxi 3 000 000 soʻm boʻlgan telefon, 12 oyga",
-      "count": 12,
-      "amount": "325 000",
-      "unit": "soʻm",
-      "cadence": "har oy",
-      "total": {
-        "label": "Jami toʻlov",
-        "value": "3 900 000 soʻm"
-      },
-      "extra": {
-        "label": "Ortiqcha toʻlov",
-        "value": "900 000 soʻm · 30%"
-      }
-    },
-    {
       "type": "p",
       "text": "Reklamada odatda shu 30% koʻrinadi. Lekin bu kreditning yillik foiz stavkasi emas."
     },
@@ -286,29 +201,6 @@
       "text": "**Samarali yillik stavka:** agar har oydagi foiz keyingi oyga qoʻshilib borsa – xuddi bankdagi omonat foizi foizga qoʻshilganidek – natija boshqacha boʻladi – **65,5%**."
     },
     {
-      "type": "graphic",
-      "kind": "bars",
-      "title": "Bitta toʻlov jadvali — uch xil oʻlchov",
-      "items": [
-        {
-          "label": "Naqd narxga nisbatan ustama",
-          "value": "30%",
-          "v": 30
-        },
-        {
-          "label": "Nominal yillik stavka",
-          "value": "51,4%",
-          "v": 51.4
-        },
-        {
-          "label": "Samarali yillik stavka",
-          "value": "65,5%",
-          "v": 65.5,
-          "accent": true
-        }
-      ]
-    },
-    {
       "type": "p",
       "text": "65,5% koʻrsatkichi nasiya toʻlov jadvalini bank krediti bilan bir xil oʻlchovda solishtirilganda hosil boʻlgan natija."
     },
@@ -321,46 +213,8 @@
       "text": "Oʻzbekistonda «foizsiz» yozuvi ortida koʻpincha **oshirilgan narx** turadi. Markaziy bank keltirgan misolda Idea doʻkonida iPhone 16 Pro 128GB 6 oylik «ortiqcha toʻlovsiz» nasiyaga 21 990 000 soʻmdan (oyiga 3 665 000 soʻm) taklif qilingan. Regulyator hisobiga koʻra, bu narx bozordagi oʻrtacha 14,4 mln soʻmdan 52,4% yuqori boʻlgan. Foiz yoʻq, lekin narx boshqacha."
     },
     {
-      "type": "graphic",
-      "kind": "price",
-      "title": "iPhone 16 Pro 128GB, Idea, 6 oy «ortiqcha toʻlovsiz»",
-      "before": {
-        "label": "Bozordagi oʻrtacha narx",
-        "value": "14,4 mln soʻm"
-      },
-      "after": {
-        "label": "Nasiya narxi",
-        "value": "21 990 000 soʻm"
-      },
-      "meta": ["oyiga 3 665 000 soʻm"],
-      "diff": {
-        "label": "Yuqori",
-        "value": "52,4%"
-      }
-    },
-    {
       "type": "p",
       "text": "Foizsiz nasiyani tekshirishning oddiy usuli – **naqd chegirma haqida soʻrash.** Masalan, 3 mln soʻmlik telefon 12 oyga, oyiga 250 ming soʻmdan, «0%» bilan sotilmoqda. Agar oʻsha doʻkon naqd toʻlovga 10% chegirma bersa (2,7 mln soʻm), demak, nasiyani tanlab siz 300 ming soʻm ortiqcha toʻlaysiz. Bu yillik qariyb 22% samarali stavkaga teng."
-    },
-    {
-      "type": "graphic",
-      "kind": "receipt",
-      "title": "Naqd chegirma haqida soʻrang",
-      "lines": [
-        {
-          "label": "Nasiya «0%», 12 oy × 250 ming soʻm",
-          "value": "3 mln soʻm"
-        },
-        {
-          "label": "Naqd, 10% chegirma bilan",
-          "value": "2,7 mln soʻm"
-        }
-      ],
-      "total": {
-        "label": "Ortiqcha toʻlov",
-        "value": "300 ming soʻm"
-      },
-      "foot": "Yillik qariyb 22% samarali stavka"
     },
     {
       "type": "p",

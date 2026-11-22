@@ -25,13 +25,13 @@ Why these were chosen: see [`docs/DECISIONS.md`](docs/DECISIONS.md).
 ```
 hamyon-uz/
 ├── content/originals/  ← your original article texts (the site is checked against them)
-├── public/media/       ← video posters, short silent previews, article covers
+├── public/media/       ← article pictures, video files and posters
 ├── scripts/            ← the content check and the one-time importer
 ├── src/
 │   ├── app/            ← pages (each folder = a web address)
-│   ├── components/     ← reusable design pieces (header, infographics, cards…)
-│   ├── content/        ← articles, videos and video scripts
-│   └── lib/site.ts     ← site name, the two sections, links
+│   ├── components/     ← header, footer, article text
+│   ├── content/        ← the 3 articles and videos.json
+│   └── lib/site.ts     ← site name, address, authors
 ├── docs/               ← decisions, structure and roadmap
 └── package.json        ← tools the project uses + shortcut commands
 ```

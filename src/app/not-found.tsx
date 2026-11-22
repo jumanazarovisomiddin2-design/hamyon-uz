@@ -20,12 +20,6 @@ export default function NotFound() {
               <Link href="/" className="btn no-underline">
                 Bosh sahifaga qaytish
               </Link>
-              <Link href="/maqolalar" className="btn no-underline">
-                Maqolalar
-              </Link>
-              <Link href="/multimedia" className="btn no-underline">
-                Multimedia
-              </Link>
             </div>
           </div>
         </section>

@@ -1,12 +1,9 @@
 import type { ReactNode } from "react";
-import type { Article, Block } from "@/content";
+import type { Article } from "@/content";
 import { slugify } from "@/lib/format";
-import { GraphicBlock } from "./graphics";
 
 /** The placeholder the authors left for the expert's name: "….." */
 const MISSING = "…..";
-
-type TextBlock = Extract<Block, { text: string }>;
 
 /**
  * Inline text: **bold** and *italic* exactly as in the original file.
@@ -55,16 +52,7 @@ export function Inline({ text }: { text: string }) {
   return <>{out}</>;
 }
 
-export function headings(article: Article) {
-  return article.body
-    .filter((b) => b.type === "h2")
-    .map((b) => {
-      const text = (b as TextBlock).text;
-      return { id: slugify(text), text };
-    });
-}
-
-/** Renders the article exactly as written, with infographics in between. */
+/** Renders the article exactly as written. */
 export function ArticleBody({ article }: { article: Article }) {
   // Drop cap on the first paragraph — unless it opens with initials ("D. Y.")
   const first = article.body.findIndex((b) => b.type === "p");
@@ -112,8 +100,6 @@ export function ArticleBody({ article }: { article: Article }) {
                 ))}
               </ul>
             );
-          case "graphic":
-            return <GraphicBlock key={i} g={b} />;
           default: {
             if (i !== dropCapAt) {
               return (

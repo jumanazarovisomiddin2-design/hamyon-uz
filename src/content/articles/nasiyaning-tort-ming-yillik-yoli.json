@@ -1,12 +1,7 @@
 {
   "slug": "nasiyaning-tort-ming-yillik-yoli",
   "title": "Bugun ol, keyin toʻla: nasiyaning toʻrt ming yillik yoʻli",
-  "titleAccent": "toʻrt ming yillik",
-  "format": "uzun-oqish",
   "order": 1,
-  "author": "Tahririyat",
-  "publishedAt": null,
-  "series": "nasiya-sovga-emas",
   "excerpt": "Bugun butun dunyoda millionlab odamlar nasiya orqali xarid qiladi. Lekin bu odat internet-doʻkonlar va fintech kompaniyalari bilan paydo boʻlmagan.",
   "cover": {
     "kind": "image",
@@ -16,7 +11,6 @@
     "width": 1600,
     "height": 900
   },
-  "photo": null,
   "body": [
     {
       "type": "p",
@@ -37,21 +31,6 @@
     {
       "type": "p",
       "text": "Foiz stavkalari ham ancha tartibli boʻlgan. Kumush evaziga olingan qarzlar uchun odatiy stavka 20 foiz, arpa evaziga olingan qarzlar uchun 33⅓ foiz edi. Arpa qarzlar odatda hosil paytida arpa yoki uning kumushdagi qiymatida qaytarilgani uchun, bu mavsumiy qarz edi."
-    },
-    {
-      "type": "graphic",
-      "kind": "figures",
-      "title": "Mesopotamiyadagi odatiy foiz stavkalari",
-      "items": [
-        {
-          "value": "20%",
-          "label": "kumush evaziga olingan qarzlar"
-        },
-        {
-          "value": "33⅓%",
-          "label": "arpa evaziga olingan qarzlar"
-        }
-      ]
     },
     {
       "type": "p",
@@ -104,24 +83,6 @@
     {
       "type": "p",
       "text": "Tikuv mashinasi ham shunday: u koʻylak tikish vaqtini oʻn toʻrt soatdan bir soatga tushirgan. Lekin tikuv mashinasi qimmat edi. 1850-yillarda Singer mashinasi taxminan 125 dollar turgan, oʻrtacha amerikalik oilaning yillik daromadi esa 500 dollar atrofida edi. Yaʼni mashina oilaning yillik daromadining qariyb choragiga teng kelgan."
-    },
-    {
-      "type": "graphic",
-      "kind": "bars",
-      "title": "Singer tikuv mashinasi va oila daromadi, 1850-yillar",
-      "items": [
-        {
-          "label": "Singer mashinasi",
-          "value": "taxminan 125 dollar",
-          "v": 125,
-          "accent": true
-        },
-        {
-          "label": "Oʻrtacha amerikalik oilaning yillik daromadi",
-          "value": "500 dollar atrofida",
-          "v": 500
-        }
-      ]
     },
     {
       "type": "p",
@@ -184,20 +145,6 @@
       "text": "Shundan keyingi oʻzgarishlar raqamlarda aks etgan. Huquqshunos Arthur Wilmarthning hisobiga koʻra, AQShda isteʼmolchilarning boʻlib toʻlash qarzlari 1919-yilda 1,9 milliard dollardan 1929-yilda 4,9 milliard dollarga yetgan, ularning asosiy qismini esa avtomobil kreditlari tashkil qilgan."
     },
     {
-      "type": "graphic",
-      "kind": "change",
-      "title": "AQShda isteʼmolchilarning boʻlib toʻlash qarzlari",
-      "from": {
-        "when": "1919",
-        "value": "1,9 mlrd dollar"
-      },
-      "to": {
-        "when": "1929",
-        "value": "4,9 mlrd dollar"
-      },
-      "note": "Arthur Wilmarth hisobi"
-    },
-    {
       "type": "p",
       "text": "Bu kreditlar arzon boʻlmagan. Bankirlar uyushmasi uchun hisobot yozgan Milan Ayres 1926-yilda boʻlib toʻlash savdosidagi samarali foiz stavkalari 15 dan 40 foizgacha yetishini taʼkidlagan."
     },
@@ -238,77 +185,12 @@
       "text": "BNPL xizmatlarini taklif qiluvchi kompaniyalar bir xil modelda ishlamaydi. Ularning toʻlov shartlari, muddatlari va foiz stavkalari farq qiladi. Masalan, Klarnaʼning «Pay in 4» xizmatida xaridor 100 dollarlik kurtkani toʻrt qismga boʻlib toʻlaydi. Dastlab 25 dollar toʻlaydi, qolgan uch qismini esa har ikki haftada bir marta amalga oshiradi. Affirm esa bunday qisqa muddatli toʻlovlar bilan bir qatorda uzoq muddatli kreditlarni ham taklif qiladi. 2023-yilda uning toʻlov muddatlari 6 oydan 60 oygacha, yillik foiz stavkalari esa 0 dan 36 foizgacha boʻlgan. Demak, BNPL xizmatlari orasida foizsiz qisqa muddatli toʻlovlar ham, foiz hisoblanadigan uzoq muddatli kreditlar ham mavjud. Tashqi koʻrinishda oʻxshash boʻlsa-da, ularning xaridor uchun moliyaviy oqibatlari bir-biridan farq qiladi."
     },
     {
-      "type": "graphic",
-      "kind": "schedule",
-      "title": "Klarna «Pay in 4»: 100 dollarlik kurtka",
-      "count": 4,
-      "amount": "25",
-      "unit": "dollar",
-      "first": "dastlab",
-      "cadence": "qolgan uch qismi — har ikki haftada",
-      "total": {
-        "label": "Jami",
-        "value": "100 dollar"
-      }
-    },
-    {
       "type": "h2",
       "text": "Nasiya hamisha bor edi, shakli oʻzgardi"
     },
     {
       "type": "p",
       "text": "Mesopotamiyada nasiya dehqonchilik va savdoni moliyalashtirgan. Singer davrida ommaviy ishlab chiqarilgan tovar oddiy oilaga yetkazildi. XX asrda u avtomobil va maishiy texnika bozorini kengaytirgan. XXI asrda esa kundalik xaridlarning bir qismiga aylandi."
-    },
-    {
-      "type": "graphic",
-      "kind": "timeline",
-      "title": "Nasiyaning yoʻli — maqoladagi sanalar",
-      "items": [
-        {
-          "when": "mil. avv. 2100–2000",
-          "what": "Ur, Mesopotamiya: mixxat yozuvlaridagi qarz hujjatlari"
-        },
-        {
-          "when": "XI asr",
-          "what": "Qohira sinagogasi hujjatlari: Oʻrta yer dengizi savdosi"
-        },
-        {
-          "when": "1840–1890",
-          "what": "Mebel, pianino, qishloq xoʻjaligi texnikasi va tikuv mashinasi"
-        },
-        {
-          "when": "1856",
-          "what": "Singer: ijara-xarid tartibi"
-        },
-        {
-          "when": "1873",
-          "what": "Mark Tven va Charlz Dadli Uorner, «Oltin asr»"
-        },
-        {
-          "when": "1919",
-          "what": "General Motors — GMAC"
-        },
-        {
-          "when": "1950",
-          "what": "Diners Club kartasi"
-        },
-        {
-          "when": "1958",
-          "what": "BankAmericard — aylanma kredit"
-        },
-        {
-          "when": "2005",
-          "what": "Stokgolm: Kreditor kompaniyasi"
-        },
-        {
-          "when": "2012",
-          "what": "Affirm, AQSh"
-        },
-        {
-          "when": "2014",
-          "what": "Afterpay, Melburn"
-        }
-      ]
     },
     {
       "type": "p",
