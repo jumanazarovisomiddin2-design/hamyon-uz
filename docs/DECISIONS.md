@@ -82,3 +82,26 @@ and rhythm. Design canvas: https://claude.ai/artifact/4oPhCSTSR2svKs4CLDLK4V
 - Living style guide at `/dizayn-tizimi` (hidden from search engines).
 - Social links are configured in `src/lib/site.ts` and only appear once a real address is added.
 - Note: a spacing token must not be called `block` — it clashes with Tailwind's `inline-block`.
+
+## 2026-11-22 — Stage 3: pages and sample content
+
+- **Content lives in `src/content/`** until the CMS (stage 4): one file per story in
+  `src/content/stories/`, videos in `src/content/videos.ts`, homepage choices in
+  `src/content/index.ts` (`frontPage`). Types in `src/content/types.ts` — the CMS will use the
+  same fields.
+- **Sample content is real**, from the owner's "Nasiya sovgʻa emas" project: three full articles
+  (history, hidden cost, 2027 rules) as a numbered series; two analysis pieces and four guides
+  built only from those drafts and the Central Bank study (S. Agzamov, CBU, 2025), with sources
+  listed. No invented figures.
+- **Clearly marked placeholders**: "FOTO KERAK" boxes with a photographer brief; video frames
+  marked "KADR KERAK" and "Tez orada" (the two videos are planned, not published); expert name
+  "[ekspert ismi]" and photographer "[fotograf]"; the newsletter form is shown but disabled
+  ("Obuna hali ochilmagan").
+- **Article text format** (`src/lib/body.tsx`): headings, quotes, pull quotes, and three
+  receipt-style blocks — `:::calc` (calculation with dotted leaders), `:::table`, `:::figures` —
+  plus `:::checklist` and `:::note`.
+- **Page groups**: `app/(site)` = paper pages; `app/(kino)` = dark cinema pages (videos).
+- **Article layout**: three columns (contents · text · key takeaway/series) from 1280 px; single
+  centred reading column below that. Text column never wider than 700 px.
+- **Videos** load YouTube only when the reader presses play (youtube-nocookie.com).
+- Not built yet (outside stage 3): "Biz haqimizda" page and search (`/qidiruv`).

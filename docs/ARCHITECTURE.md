@@ -1,7 +1,7 @@
 # Architecture — sections, addresses and content model
 
-This is the plan the site will be built against. Nothing here is built yet beyond the foundation;
-it exists so every later stage fits together.
+This is the plan the site is built against. Stage 3 built the homepage, the four sections and the
+story and video pages; the content model below is implemented in `src/content/types.ts`.
 
 ## Sections and web addresses
 

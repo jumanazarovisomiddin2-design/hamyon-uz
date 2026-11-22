@@ -3,15 +3,16 @@ import { footerLinks, socialLinks } from "@/lib/site";
 import { Wordmark } from "./wordmark";
 
 /** Site footer: perforation line, large wordmark, links, copyright. */
-export function SiteFooter() {
+export function SiteFooter({ tone = "light" }: { tone?: "light" | "dark" }) {
   const socials = socialLinks.filter((s) => s.href);
+  const dark = tone === "dark";
   const year = 2026; // update yearly, or replace with the build year
 
   return (
     <footer className="page mt-section pb-14">
-      <hr className="perforation" />
+      <hr className={`perforation ${dark ? "border-smoke" : ""}`} />
       <div className="flex flex-col gap-8 pt-8 lg:flex-row lg:items-end lg:justify-between">
-        <Wordmark size="lg" />
+        <Wordmark size="lg" tone={tone} />
         <nav aria-label="Qoʻshimcha havolalar">
           <ul className="flex flex-wrap gap-x-7 gap-y-1 font-sans text-[0.90625rem] font-medium">
             {footerLinks.map((l) => (
@@ -38,7 +39,9 @@ export function SiteFooter() {
             ))}
           </ul>
         </nav>
-        <p className="figure text-ink-muted m-0 text-[0.78125rem]">© {year} · Mustaqil nashr</p>
+        <p className={`figure m-0 text-[0.78125rem] ${dark ? "text-stone" : "text-ink-muted"}`}>
+          © {year} · Mustaqil nashr
+        </p>
       </div>
     </footer>
   );

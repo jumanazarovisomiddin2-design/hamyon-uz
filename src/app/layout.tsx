@@ -1,6 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
 import { site } from "@/lib/site";
 
 // Typefaces — self-hosted (no Google request), with Uzbek Latin + Cyrillic.
@@ -33,6 +31,7 @@ export const viewport: Viewport = {
   themeColor: "#f6f1e7",
 };
 
+/** The page frame shared by every page. Header and footer live in the group layouts. */
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang={site.lang} className="h-full">
@@ -43,11 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Asosiy matnga oʻtish
         </a>
-        <SiteHeader />
-        <main id="asosiy" className="flex-1">
-          {children}
-        </main>
-        <SiteFooter />
+        {children}
       </body>
     </html>
   );
